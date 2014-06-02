@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>783044ab-193d-42fe-974a-fa5b54e5c795</ProjectGuid>
+    <ProjectGuid>{358E181E-2931-4A5A-A49F-FA1C4CB55C10}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Lecture02</RootNamespace>
-    <AssemblyName>Lecture02</AssemblyName>
+    <RootNamespace>Renamer</RootNamespace>
+    <AssemblyName>Renamer</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -32,6 +32,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Harmonizer">
+      <HintPath>..\..\Harmonizer.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
