@@ -1,24 +1,19 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Модуль 01 - Введение в C Sharp", "Модуль 01 - Введение в C Sharp", "{4ED1D997-A179-4BE6-B6CB-A36FE7380ACE}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Модуль 02 - Введение в C Sharp", "Модуль 02 - Введение в C Sharp", "{4ED1D997-A179-4BE6-B6CB-A36FE7380ACE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Лекция 01 - Hello, world!", "Модуль 01 - Введение в C Sharp\Лекция 01 - Hello, world!\Лекция 01 - Hello, world!.csproj", "{DF511F11-A987-4EB0-BE35-BC17761F4361}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Лекция 01 - Hello, world!", "Модуль 02 - Введение в C Sharp\Лекция 01 - Hello, world!\Лекция 01 - Hello, world!.csproj", "{DF511F11-A987-4EB0-BE35-BC17761F4361}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Лекция 02 - Ошибки", "Лекция 02 - Ошибки", "{D978B0B6-2118-4863-9DA2-234963865730}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Часть 01 - Ошибки компиляции и выполнения", "Модуль 02 - Введение в C Sharp\Лекция 02 - Ошибки\Часть 01 - Ошибки компиляции и выполнения\Часть 01 - Ошибки компиляции и выполнения.csproj", "{D8406531-C157-4465-A4AE-8C405CBDE83C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Часть 02 - Рефакторинг", "Модуль 02 - Введение в C Sharp\Лекция 02 - Ошибки\Часть 02 - Рефакторинг\Часть 02 - Рефакторинг.csproj", "{40AC4BFD-A067-4B5E-968B-ABB793797980}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Common", "Common", "{DB1EC180-2BA0-4FAE-82C8-3EA1A6845FA3}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Renamer", "Common\Renamer\Renamer.csproj", "{358E181E-2931-4A5A-A49F-FA1C4CB55C10}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Лекция 02 - Ошибки", "Лекция 02 - Ошибки", "{D978B0B6-2118-4863-9DA2-234963865730}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Часть 1 - Ошибки компиляции и выполнения", "Часть 1 - Ошибки компиляции и выполнения\Часть 1 - Ошибки компиляции и выполнения.csproj", "{D8406531-C157-4465-A4AE-8C405CBDE83C}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Часть 2 - Рефакторинг", "Часть 2 - рефакторинг\Часть 2 - Рефакторинг.csproj", "{40AC4BFD-A067-4B5E-968B-ABB793797980}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{52B97C9A-60C6-4C13-A1DF-7A21A77C7E0C}"
-	ProjectSection(SolutionItems) = preProject
-		Class1.cs = Class1.cs
-	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -40,16 +35,6 @@ Global
 		{DF511F11-A987-4EB0-BE35-BC17761F4361}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
 		{DF511F11-A987-4EB0-BE35-BC17761F4361}.Release|Mixed Platforms.Build.0 = Release|Any CPU
 		{DF511F11-A987-4EB0-BE35-BC17761F4361}.Release|x86.ActiveCfg = Release|Any CPU
-		{358E181E-2931-4A5A-A49F-FA1C4CB55C10}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{358E181E-2931-4A5A-A49F-FA1C4CB55C10}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{358E181E-2931-4A5A-A49F-FA1C4CB55C10}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
-		{358E181E-2931-4A5A-A49F-FA1C4CB55C10}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
-		{358E181E-2931-4A5A-A49F-FA1C4CB55C10}.Debug|x86.ActiveCfg = Debug|Any CPU
-		{358E181E-2931-4A5A-A49F-FA1C4CB55C10}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{358E181E-2931-4A5A-A49F-FA1C4CB55C10}.Release|Any CPU.Build.0 = Release|Any CPU
-		{358E181E-2931-4A5A-A49F-FA1C4CB55C10}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
-		{358E181E-2931-4A5A-A49F-FA1C4CB55C10}.Release|Mixed Platforms.Build.0 = Release|Any CPU
-		{358E181E-2931-4A5A-A49F-FA1C4CB55C10}.Release|x86.ActiveCfg = Release|Any CPU
 		{D8406531-C157-4465-A4AE-8C405CBDE83C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{D8406531-C157-4465-A4AE-8C405CBDE83C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D8406531-C157-4465-A4AE-8C405CBDE83C}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
@@ -70,6 +55,16 @@ Global
 		{40AC4BFD-A067-4B5E-968B-ABB793797980}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
 		{40AC4BFD-A067-4B5E-968B-ABB793797980}.Release|Mixed Platforms.Build.0 = Release|Any CPU
 		{40AC4BFD-A067-4B5E-968B-ABB793797980}.Release|x86.ActiveCfg = Release|Any CPU
+		{358E181E-2931-4A5A-A49F-FA1C4CB55C10}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{358E181E-2931-4A5A-A49F-FA1C4CB55C10}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{358E181E-2931-4A5A-A49F-FA1C4CB55C10}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{358E181E-2931-4A5A-A49F-FA1C4CB55C10}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{358E181E-2931-4A5A-A49F-FA1C4CB55C10}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{358E181E-2931-4A5A-A49F-FA1C4CB55C10}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{358E181E-2931-4A5A-A49F-FA1C4CB55C10}.Release|Any CPU.Build.0 = Release|Any CPU
+		{358E181E-2931-4A5A-A49F-FA1C4CB55C10}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{358E181E-2931-4A5A-A49F-FA1C4CB55C10}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{358E181E-2931-4A5A-A49F-FA1C4CB55C10}.Release|x86.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -77,8 +72,8 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{DF511F11-A987-4EB0-BE35-BC17761F4361} = {4ED1D997-A179-4BE6-B6CB-A36FE7380ACE}
 		{D978B0B6-2118-4863-9DA2-234963865730} = {4ED1D997-A179-4BE6-B6CB-A36FE7380ACE}
-		{358E181E-2931-4A5A-A49F-FA1C4CB55C10} = {DB1EC180-2BA0-4FAE-82C8-3EA1A6845FA3}
 		{D8406531-C157-4465-A4AE-8C405CBDE83C} = {D978B0B6-2118-4863-9DA2-234963865730}
 		{40AC4BFD-A067-4B5E-968B-ABB793797980} = {D978B0B6-2118-4863-9DA2-234963865730}
+		{358E181E-2931-4A5A-A49F-FA1C4CB55C10} = {DB1EC180-2BA0-4FAE-82C8-3EA1A6845FA3}
 	EndGlobalSection
 EndGlobal

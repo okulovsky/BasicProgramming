@@ -13,7 +13,7 @@ namespace Renamer
             Harmonizer.Renamer.Rename(
                 "..\\..\\..\\..\\BasicProgramming.sln",
                 new string[] { "Common" },
-                new string[] { "Модуль", "Лекция", "Эпизод" });
+                new string[] { "Модуль", "Лекция", "Часть" });
         }
     }
 }
