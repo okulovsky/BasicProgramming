@@ -1,15 +1,15 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Модуль 02 - Введение в C Sharp", "Модуль 02 - Введение в C Sharp", "{4ED1D997-A179-4BE6-B6CB-A36FE7380ACE}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Модуль 01 - Введение в C Sharp", "Модуль 01 - Введение в C Sharp", "{4ED1D997-A179-4BE6-B6CB-A36FE7380ACE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Лекция 01 - Hello, world!", "Модуль 02 - Введение в C Sharp\Лекция 01 - Hello, world!\Лекция 01 - Hello, world!.csproj", "{DF511F11-A987-4EB0-BE35-BC17761F4361}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Лекция 01 - Hello, world!", "Модуль 01 - Введение в C Sharp\Лекция 01 - Hello, world!\Лекция 01 - Hello, world!.csproj", "{DF511F11-A987-4EB0-BE35-BC17761F4361}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Лекция 02 - Ошибки", "Лекция 02 - Ошибки", "{D978B0B6-2118-4863-9DA2-234963865730}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Часть 01 - Ошибки компиляции и выполнения", "Модуль 02 - Введение в C Sharp\Лекция 02 - Ошибки\Часть 01 - Ошибки компиляции и выполнения\Часть 01 - Ошибки компиляции и выполнения.csproj", "{D8406531-C157-4465-A4AE-8C405CBDE83C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Часть 01 - Ошибки компиляции и выполнения", "Модуль 01 - Введение в C Sharp\Лекция 02 - Ошибки\Часть 01 - Ошибки компиляции и выполнения\Часть 01 - Ошибки компиляции и выполнения.csproj", "{D8406531-C157-4465-A4AE-8C405CBDE83C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Часть 02 - Рефакторинг", "Модуль 02 - Введение в C Sharp\Лекция 02 - Ошибки\Часть 02 - Рефакторинг\Часть 02 - Рефакторинг.csproj", "{40AC4BFD-A067-4B5E-968B-ABB793797980}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Часть 02 - Рефакторинг", "Модуль 01 - Введение в C Sharp\Лекция 02 - Ошибки\Часть 02 - Рефакторинг\Часть 02 - Рефакторинг.csproj", "{40AC4BFD-A067-4B5E-968B-ABB793797980}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Common", "Common", "{DB1EC180-2BA0-4FAE-82C8-3EA1A6845FA3}"
 EndProject
