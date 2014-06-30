@@ -24,6 +24,7 @@ namespace Semaphore
                 form.LightOff(1);
                 form.LightOn(2);
                 Wait(1);
+                //Здесь мы заменили повторяющиеся строчки циклом
                 for (int i = 0; i < 5; i++)
                 {
                     form.LightOff(2);

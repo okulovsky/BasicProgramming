@@ -8,6 +8,7 @@ namespace Semaphore
 {
     static partial class LightsController
     {
+        //Код, который будет далее модифицироваться
         static void ControlV1()
         {
             Wait(1);

@@ -10,6 +10,7 @@ namespace Semaphore
 
     static partial class LightsController
     {
+        //И, наконец, плохо, когда в программе есть числовые значения. Лучше заменять их на константы.
         const int BlinkingCount = 5;
         const double LightTime = 1;
         const double BlinkingTime = 0.25;
@@ -26,6 +27,7 @@ namespace Semaphore
                 SwitchTo(Lights.Green);
                 Wait(LightTime);
                 
+                //Обратите внимание, что нуля в данном случае это не касается
                 for (int i = 0; i < BlinkingCount; i++)
                 {
                     LightOff(Lights.Green);
