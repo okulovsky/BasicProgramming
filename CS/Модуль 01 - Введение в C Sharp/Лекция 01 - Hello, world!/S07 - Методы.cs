@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Slide08
+namespace Slide07
 {
     class Program
     {
@@ -23,7 +23,7 @@ namespace Slide08
         {
             Console.WriteLine(number);
             
-            // return указывается без значения, и его следует опускать
+            // return указывается без значения, и его следует опускать, когда это возможно
             return; 
         }
 

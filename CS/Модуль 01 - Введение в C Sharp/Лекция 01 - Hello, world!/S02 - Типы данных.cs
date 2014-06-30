@@ -5,10 +5,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Slide03
+namespace Slide02
 {
     class Program
     {
+        //Метод Main в программе может быть только один. Поэтому все другие методы называются MainX.
+        //Если вы хотите запустить какой-либо слайд, нужно переименовать MainX->Main, а текущий Main - в MainX.
         static void MainX()
         {
             /*

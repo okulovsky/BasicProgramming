@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Slide07
+namespace Slide06
 {
     class Program
     {
@@ -49,11 +49,11 @@ namespace Slide07
 
             a = 5;
             Console.WriteLine(a++); 
-            // выведет 6
+            // выведет 5
 
             a = 5;
             Console.WriteLine(++a); 
-            // выведет 5
+            // выведет 6
 
 
         }

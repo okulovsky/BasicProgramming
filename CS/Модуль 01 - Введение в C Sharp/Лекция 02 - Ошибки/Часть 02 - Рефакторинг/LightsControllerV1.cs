@@ -16,7 +16,7 @@ namespace Semaphore
                 form.LightOn(0);
                 Wait(1);
                 form.LightOn(1);
-                Wait(0.5);
+                Wait(1);
                 form.LightOff(0);
                 form.LightOff(1);
                 form.LightOn(2);

@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Slide06
+namespace Slide05
 {
     class Program
     {
@@ -34,10 +34,18 @@ namespace Slide06
             var realNumber = double.Parse("34.56");
 
             //Вот так этого можно избежать
-            realNumber = double.Parse("34.56", CultureInfo.InvariantCulture); 
-
+            realNumber = double.Parse("34.56", CultureInfo.InvariantCulture);
 
             int number = int.Parse(Console.ReadLine()); // А вот так осуществляется чтение числа из консоли
+
+            /* Обратите внимания, что некоторые методы вызываются через имя типа (int.Parse), 
+             * а некоторые - через имя переменной (integerNumber.ToString())
+             * 
+             * Первые методы называются статическими. Их работа не зависит от информации, которая хранится в памяти
+             * и определяется только типом. 
+             * 
+             * Вторые - динамические методы. Результат их работы зависит от значений в памяти
+             */
         }
     }
 }

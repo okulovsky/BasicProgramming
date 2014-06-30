@@ -37,7 +37,7 @@ namespace Semaphore
                 LightOn(Lights.Red); // Теперь из Intellisence видно, что в LightOn нужно передать цвет, причем только один из трех
                 Wait(1);
                 LightOn(Lights.Yellow);
-                Wait(0.5);
+                Wait(1);
                 LightOff(Lights.Red);
                 LightOff(Lights.Yellow);
                 LightOn(Lights.Green);

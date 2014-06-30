@@ -23,7 +23,7 @@ namespace Semaphore
                 form.LightOn(Red);
                 Wait(1);
                 form.LightOn(Yellow);
-                Wait(0.5);
+                Wait(1);
                 form.LightOff(Red);
                 form.LightOff(Yellow);
                 form.LightOn(Green);

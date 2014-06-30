@@ -46,6 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="LightsControllerV6.cs" />
     <Compile Include="LightsControllerV0.cs" />
     <Compile Include="LightsControllerV5.cs" />
     <Compile Include="LightsControllerV4.cs" />

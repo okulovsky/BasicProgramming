@@ -41,18 +41,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="S03 - Типы данных.cs" />
-    <Compile Include="S02 - namespace и using.cs" />
+    <Compile Include="S02 - Типы данных.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="S01 - Hello, world!.cs" />
-    <Compile Include="S04 - Конверсия типов.cs" />
-    <Compile Include="S05 - Строки.cs" />
-    <Compile Include="S06 - Parse и ToString.cs" />
-    <Compile Include="S07 - Арифметические операции и var.cs" />
-    <Compile Include="S08 - Методы.cs" />
-    <Compile Include="S09 - Локальные и глобальные переменные.cs" />
-    <Compile Include="S10 - Значения переменных по умолчанию.cs" />
-    <Compile Include="S11 - Комментарии и Intellisence.cs" />
+    <Compile Include="S03 - Конверсия типов.cs" />
+    <Compile Include="S04 - Строки.cs" />
+    <Compile Include="S05 - Parse и ToString.cs" />
+    <Compile Include="S06 - Арифметические операции и var.cs" />
+    <Compile Include="S07 - Методы.cs" />
+    <Compile Include="S08 - Локальные и глобальные переменные.cs" />
+    <Compile Include="S09 - Значения переменных по умолчанию.cs" />
+    <Compile Include="S10 - Комментарии и Intellisence.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

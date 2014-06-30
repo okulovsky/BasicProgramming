@@ -29,7 +29,7 @@ namespace Semaphore
                 SwitchTo(Lights.Red); 
                 Wait(1);
                 LightOn(Lights.Yellow);
-                Wait(0.5);
+                Wait(1);
                 SwitchTo(Lights.Green);
                 Wait(1);
                 for (int i = 0; i < 5; i++)
