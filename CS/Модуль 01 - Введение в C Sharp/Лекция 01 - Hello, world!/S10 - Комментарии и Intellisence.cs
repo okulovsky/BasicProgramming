@@ -25,6 +25,7 @@ namespace Slide10
         static void MainX()
         {
             // Вы можете изучать методы и классы самостоятельно, используя документацию и Intellisence
+            // Чтобы посмотреть документацию, нажмите Ctrl-K,P
             Console.ForegroundColor = ConsoleColor.Red;
             Console.WriteLine(DivideAndRound(0.1, 0.01));
         }
