@@ -27,6 +27,14 @@ namespace Slide07
             return; 
         }
 
+        //
+        static void WriteNumber(int number, int anotherNumber)
+        {
+            Console.WriteLine(number);
+            Console.WriteLine(anotherNumber);
+        }
+
+
 
         static void MainX()
         {
