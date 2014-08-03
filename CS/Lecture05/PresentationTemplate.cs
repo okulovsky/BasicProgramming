@@ -5,24 +5,18 @@ delegate void MyAction(ref int value);
 
 class Program
 {
-    static void Action(ref int value)
+    static int n;
+
+    static void Update()
     {
-        Console.WriteLine("Action sleeps");
-        Thread.Sleep(100);
-        value = 1;
-        Console.WriteLine("Value updated");
-        Console.WriteLine("Action sleeps");
-        Thread.Sleep(200);
-        Console.WriteLine("Action exited");
+        n++;
     }
 
-    static void Main()
+    static void MainЧ()
     {
-        int myVal = 1;
-        new MyAction(Action).BeginInvoke(ref myVal, null, null);
-        Thread.Sleep(150);
-        Console.WriteLine("Value in Main =" + myVal);
-        Thread.Sleep(1000);
+        string str = "asd";
+        n = 1;
+        Update();
+        Console.WriteLine(n);
     }
-
 }
