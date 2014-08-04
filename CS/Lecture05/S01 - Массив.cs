@@ -4,7 +4,7 @@ namespace Slide01
 {
     public class Program
     {
-        public static void MainX()
+        public static void Main()
         {
             //Здесь мы объявляем переменную array, точно также, как раньше объявляли переменные других типов.
             //Тип массива чисел - это int[]. Аналогично, есть типы string[], double[], и т.д.
