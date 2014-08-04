@@ -4,7 +4,7 @@ namespace Slide08
 {
     public class Program
     {
-        public static void Main()
+        public static void MainX()
         {
             //Это - массив массивов. Поскольку массив является типом (как int или string),
             //то можно делать массивы этого типа, т.е. - массивы массивов

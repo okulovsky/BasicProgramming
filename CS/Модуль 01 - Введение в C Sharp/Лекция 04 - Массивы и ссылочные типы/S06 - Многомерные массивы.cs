@@ -4,7 +4,7 @@ namespace Slide06
 {
     public class Program
     {
-        public static void Main()
+        public static void MainX()
         {
             //Двумерные массивы имеют тип int[,] (соответственно, double[,], string[,] и т.д.)
             int[,] twoDimensionalArray = new int[2, 3];
