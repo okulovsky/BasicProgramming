@@ -52,7 +52,6 @@
     <Compile Include="S04 - if return.cs" />
     <Compile Include="S09 - for.cs" />
     <Compile Include="S10 - Cтранные for.cs" />
-    <Compile Include="Template.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
