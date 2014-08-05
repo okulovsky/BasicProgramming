@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Slide09
+namespace Slide10
 {
     public class Program
     {
