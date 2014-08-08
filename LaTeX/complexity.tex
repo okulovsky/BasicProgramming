@@ -1,0 +1,153 @@
+\documentclass[24pt,pdf,hyperref={unicode},aspectratio=169]{beamer}
+\usepackage[utf8]{inputenc}
+\usepackage[russian]{babel}
+\begin{document}
+
+\begin{frame}\frametitle{Задача}
+\uncover<+->{{\bf Задача} -- это соответствие, определяющее зависимость выхода (слова) от входа (слова).}\\[20pt]
+
+\uncover<+->{$\Sigma$ -- алфавит (произвольное конечное множество, элементы которого интерпретируются как символы)}\\[20pt]
+
+\uncover<+->{$\Sigma^*$ -- множество всех слов из букв алфавита $\Sigma$.}\\[20pt]
+
+\uncover<+->{$\rho\subset\Sigma^*\times\Sigma^*$ -- бинарное отношение, определяющее задачу.}\\[20pt]
+
+\end{frame}
+
+\begin{frame}\frametitle{Алгоритм и программа}
+
+\uncover<+->{{\bf Алгоритм} -- это последовательность элементарных операций, обрабатывающая входную строку $x$ для получения выходной строки $y$ такой, что $(x,y)\in\rho$}\\[20pt]
+
+\uncover<+->{Под элементарной операцией в этом курсе мы будем понимать операции, исполняющиеся непосредственно на процессоре: сложение чисел, умножение и т.д.}
+
+\uncover<+->{{\bf Программа} -- это алгоритм, выраженный на некотором языке, который может быть транслирован в элементарные операции}
+
+\end{frame}
+
+\begin{frame}\frametitle{Сложность алгоритма}
+
+\uncover<+->{{\bf Сложность алгоритма} -- это функция $f(n)$, $f:\mathbb{N}\rightarrow\mathbb{N}$, показывающая точную верхнюю границу количества элементарных операций, необходимых для завершения работы алгоритма, в зависимости от количества символов во входе}
+
+\end{frame}
+
+\begin{frame}\frametitle{Сложность алгоритма}
+\begin{columns}
+\column{0.6\textwidth}
+{\tt
+var n=Console.ReadLine().Length;
+
+var sum=0;
+
+for (int i=0;i<n;i++)
+
+\ \ \ for(int j=0;j<2*i;j++)
+
+\ \ \ \ \ \ sum++;
+
+Console.WriteLine(sum);
+}
+
+\column{0.4\textwidth}
+\uncover<+->{}
+
+$$
+\uncover<+->{f(n)}\uncover<+->{=0+2+4+\ldots+2n}\uncover<+->{=2n^2}
+$$
+
+\end{columns}
+\end{frame}
+
+\begin{frame}\frametitle{Сложность алгоритма}
+\begin{columns}
+\column{0.6\textwidth}
+{\tt
+var n=int.Parse(Console.ReadLine());
+
+var sum=0;
+
+for (int i=0;i<n;i++)
+
+\ \ \ for(int j=0;j<2*i;j++)
+
+\ \ \ \ \ \ sum++;
+}
+
+Console.WriteLine(sum);
+
+\column{0.4\textwidth}
+\uncover<+->{}
+
+$$
+\uncover<+->{f(n)=0+2+4+\ldots+2n=2n^2}
+$$
+$$
+\uncover<+->{|x|=\lceil log_{10}(n) \rceil}
+$$
+$$
+\uncover<+->{10^{|x|-1}\le n \le 10^{|x|}}
+$$
+$$
+\uncover<+->{
+2\left(10^{|x|-1}\right)^2 \le f(|x|) \le 2\left(10^{|x|}\right)^2}
+$$
+$$
+\uncover<+->{
+f(|x|) = 2\left(10^{|x|}\right)^2}
+$$
+
+
+\end{columns}
+\end{frame}
+
+\begin{frame}\frametitle{Сложность алгоритма}
+\begin{columns}
+\column{0.6\textwidth}
+{\tt
+var n=int.Parse(Console.ReadLine());
+
+var root=(int)Math.Sqrt(n);
+
+\ 
+
+for (int i=2;i<root;i++)
+
+\ \ \ if (n \% i == 0) 
+
+\ \ \ \{
+
+\ \ \ \ \ \ Console.WriteLine("yes");
+
+\ \ \ \ \ \ return;
+
+\ \ \ \}
+
+\ 
+
+Console.WriteLine("no");
+}
+
+\column{0.4\textwidth}
+\uncover<+->{}
+
+$$
+\uncover<+->{f(n)=\sqrt{n}}
+$$
+
+$$
+\uncover<+->{f(|x|)=\sqrt{10^{|x|}}}
+$$
+
+\end{columns}
+\end{frame}
+
+\begin{frame}\frametitle{О-символика}
+\end{frame}
+
+\begin{frame}\frametitle{О-символика}
+\end{frame}
+
+\begin{frame}\frametitle{Классы вычислительной сложности}
+
+\end{frame}
+
+\end{document}
