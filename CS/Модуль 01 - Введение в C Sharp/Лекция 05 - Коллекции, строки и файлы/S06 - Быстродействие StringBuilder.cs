@@ -33,7 +33,7 @@ namespace Slide06
             }           
         }
 
-        static void Main()
+        static void MainX()
         {
             var watch = new Stopwatch();
             watch.Start();

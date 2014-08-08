@@ -5,7 +5,7 @@ namespace Slide01
 {
     public class Program
     {
-        static void MainX()
+        static void Main()
         {
             //Длину массива нельзя изменить
             //Иногда хочется, чтобы массив динамически рос, потому что мы не знаем заранее,

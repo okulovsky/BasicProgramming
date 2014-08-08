@@ -4,16 +4,15 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{36088E0C-261E-4722-908D-B1B9E1E994A9}</ProjectGuid>
-    <OutputType>Exe</OutputType>
+    <ProjectGuid>{71282F4A-4A50-4301-8947-FFD2C6E75C7B}</ProjectGuid>
+    <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Lecture06</RootNamespace>
-    <AssemblyName>Lecture06</AssemblyName>
+    <RootNamespace>Library</RootNamespace>
+    <AssemblyName>Library</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -23,7 +22,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
@@ -41,21 +39,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="S07 - Спецсимволы.cs" />
-    <Compile Include="S06 - Быстродействие StringBuilder.cs" />
-    <Compile Include="S05 - StringBuilder.cs" />
-    <Compile Include="S02 - Dictionary.cs" />
-    <Compile Include="S01 - List.cs" />
-    <Compile Include="S08 - Форматированный вывод.cs" />
-    <Compile Include="S09 - Кодировки, файлы, каталоги.cs" />
-    <Compile Include="Template.cs" />
-    <Compile Include="PresentationTemplate.cs" />
+    <Compile Include="QuadricEquation.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="S03 - Отличия строк и массивов.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="App.config" />
-    <None Include="S04 - Передача строк в метод.odp" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
