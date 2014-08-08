@@ -8,11 +8,22 @@ namespace Slide10
 
         public static void MainX()
         {
+            //Суммируем все числа от 1 до 10
+            var sum = 0;
+            for (int i = 1; i <= 10; i++)
+                sum += i;
+
             // Инкремент
+            // Обратите внимание: чтобы сделать что-то 10 раз, мы делаем цикл от 0 до 10!
+            // Нумерация в шарпе всегда идет с нуля!
             for (int i = 0; i < 10; i++)
                 Console.WriteLine(i);
 
-            
+            // Выводим все символы строки
+            string str="abc";
+            for (int i = 0; i < str.Length; i++)
+                Console.Write(str[i]);
+
             //Декремент
             for (int i = 9; i >=0; i--)
                 Console.Write(i + " ");
