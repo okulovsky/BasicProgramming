@@ -12,7 +12,7 @@ namespace Slide01
 
             // И его можно сохранить в переменную логического типа
             // Это тип, абсолютно равноправный с int, double и другими 
-            bool comparisonResult = 6 >7;
+            bool comparisonResult = 6 > 7;
             Console.WriteLine(comparisonResult);
 
             //Константы истины и лжи
