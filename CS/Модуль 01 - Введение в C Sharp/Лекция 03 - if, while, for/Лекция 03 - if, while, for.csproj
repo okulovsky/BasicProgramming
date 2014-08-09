@@ -41,17 +41,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="S08 - double break.cs" />
     <Compile Include="S06 - while.cs" />
-    <Compile Include="S07 - Область видимости, break.cs" />
-    <Compile Include="S08 - continue.cs" />
+    <Compile Include="S09 - Область видимости.cs" />
+    <Compile Include="S07 - break и continue.cs" />
     <Compile Include="S05 - Лишний if.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="S01 - Логические переменные и сравнения.cs" />
     <Compile Include="S02 - Логические выражения.cs" />
     <Compile Include="S03 - Оператор if.cs" />
     <Compile Include="S04 - if return.cs" />
-    <Compile Include="S09 - for.cs" />
-    <Compile Include="S10 - Cтранные for.cs" />
+    <Compile Include="S10 - for.cs" />
+    <Compile Include="S11 - Cтранные for.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

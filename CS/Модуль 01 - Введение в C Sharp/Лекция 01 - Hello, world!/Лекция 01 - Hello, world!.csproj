@@ -49,9 +49,9 @@
     <Compile Include="S05 - Parse и ToString.cs" />
     <Compile Include="S06 - Арифметические операции и var.cs" />
     <Compile Include="S07 - Методы.cs" />
-    <Compile Include="S08 - Локальные и глобальные переменные.cs" />
-    <Compile Include="S09 - Значения переменных по умолчанию.cs" />
-    <Compile Include="S10 - Комментарии и Intellisence.cs" />
+    <Compile Include="S09 - Локальные и глобальные переменные.cs" />
+    <Compile Include="S10 - Значения переменных по умолчанию.cs" />
+    <Compile Include="S08 - Комментарии и Intellisence.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

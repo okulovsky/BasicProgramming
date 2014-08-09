@@ -19,6 +19,13 @@ namespace Slide04
 
             myString = myString.Substring(0, 5);
             Console.WriteLine(myString);
+
+            //Тип string может иметь особое значение - null.
+            //Это не пустая строка, а отсутствие всякой строки.
+            myString = null;
+
+            //Интересно, что тип int такого значения иметь не может.
+            //int a=null;
         }
     }
 }

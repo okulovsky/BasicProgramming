@@ -41,11 +41,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="S02 - Оператор foreach.cs" />
+    <Compile Include="S03 - Сокращенная форма инициализации.cs" />
     <Compile Include="S06 - Многомерные массивы.cs" />
     <Compile Include="S08 - Массивы массивов.cs" />
     <Compile Include="S04 - Массивы и null.cs" />
-    <Compile Include="S03 - Оператор foreach.cs" />
-    <Compile Include="S02 - Сокращенная форма инициализации.cs" />
     <Compile Include="S01 - Массив.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
