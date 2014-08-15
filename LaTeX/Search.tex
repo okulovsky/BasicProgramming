@@ -1,0 +1,132 @@
+\documentclass[24pt,pdf,hyperref={unicode},aspectratio=169]{beamer}
+\usepackage[utf8]{inputenc}
+\usepackage[russian]{babel}
+\begin{document}
+
+\begin{frame}\frametitle{Линейный поиск}
+{\large
+
+$$
+\begin{array}{c c c c c c c c c}
+\only<2>{\downarrow} & 
+\only<3>{\downarrow} & 
+\only<4>{\downarrow} & 
+\only<5>{\downarrow} & 
+\only<6>{\downarrow} & 
+\only<7>{\downarrow} & 
+\only<8>{\downarrow} & 
+\only<9>{\downarrow} & 
+\only<10>{\downarrow} \\
+5 & 2 & 3 & 13 & 8 & 1 & 12 & 10 & 15 \\
+\end{array}
+$$}
+\end{frame}
+
+\begin{frame}[fragile]\frametitle{Алгоритм линейного поиска}
+
+\begin{verbatim}
+int Find(int[] array, int query)
+{
+    for (int i=0;i<array.Length;i++)
+        if (array[i]==query)
+            return i;
+    return -1;
+}
+\end{verbatim}
+
+\end{frame}
+
+\begin{frame}\frametitle{Бинарный поиск}
+{\large
+Поиск $7$
+
+$$ 
+\begin{array}{c c c c c c c c c c c c c}
+&&&& \only<9>{\downarrow} \\
+\only<2-5>{[}
+&&&
+\only<5>{\downarrow}
+&
+\only<6-10>{[}\only<10>{]}
+&
+\only<7>{\downarrow}\only<8-9>{]}
+&
+\only<3>{\downarrow}\only<4-7>{]}
+&&&&&&
+\only<2-3>{]}
+\\
+1 & 3 & 4 & 6 & 7 & 7 & 9 & 10& 12 & 12 & 12 & 15 & 20 \\ \hline
+0 & 1 & 2 & 3 & 4 & 5 & 6 & 7 & 8 & 9 & 10 & 11 & 12 \\
+\end{array}
+$$}
+\end{frame}
+
+\begin{frame}\frametitle{Бинарный поиск}
+Поиск $4$
+
+$$
+\begin{array}{c c c c c}
+\only<2-5>{[} &
+\only<5>{\downarrow}&
+\only<6>{[}\only<3>{\downarrow}\only<4->{]}&
+&
+\only<2-3>{]}
+\\
+1 & 3 & 5 & 7 & 9 \\
+\hline
+0 & 1 & 2 & 3 & 4 
+\end{array}
+$$
+\end{frame}
+
+
+
+\begin{frame}[fragile]\frametitle{Алгоритм бинарного поиска}
+\begin{columns}[t]
+\column{0.5\textwidth}
+\begin{verbatim}
+int Find(int[] array, int query)
+{
+    int left=0;
+    int right=array.Length-1;
+    while(left<right)
+    {
+        var mid=(left+right)/2;
+        if (query<=array[mid])
+            left=mid;
+        else
+            right=mid+1;
+    }
+    if (array[right]==query) 
+        return right;
+    return -1;
+}
+\end{verbatim}
+\column{0.5\textwidth}
+
+\only<2-3>{Утверждение. На каждой итерации значение {\tt right-left} уменьшается.\\[1cm]}
+\only<3>{Следовательно, рано или поздно оно станет неположительным, т.е. условие {\tt left<right} нарушится.}
+\only<4-5>{Утверждение. Если в массиве есть искомые значения, то на каждой итерации хотя бы одно из них находится между индексов {\tt left} и {\tt right}\\ [1cm]}
+\only<5>{Следовательно, если по завершению массива значение не обнаружено, то его не было в исходном массиве.}
+\only<6-8>{Утверждение. На каждой итерации значение {\tt left-right} уменьшается не менее чем вдвое.\\[1cm]}
+\only<7-8>{Утверждение. Если последовательно уменьшать число $N$ путем целочисленного деления на $2$, то в ноль оно обратится не позже, чем через $\lfloor \log_2 N\rfloor+1$ шагов\\[1cm]}
+\only<8>{Следовательно, алгоритм совершит порядка $\log {\tt array.Length}$ шагов, и имеет оценку сложности $\Theta(\log_n)$.}
+
+\end{columns}
+\end{frame}
+
+\begin{frame}\frametitle{Анализ алгоритма}
+
+\begin{enumerate}
+\item Доказательство корректности:
+\begin{enumerate}
+\item Алгоритм всегда останавливается?
+\item Алгоритм всегда возвращает правильный ответ?
+\end{enumerate}
+\item Оценка сложности алгоритма
+\end{enumerate}
+\end{frame}
+
+
+
+\end{document}
