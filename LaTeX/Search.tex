@@ -84,6 +84,7 @@ $$
 \begin{frame}[fragile]\frametitle{Алгоритм бинарного поиска}
 \begin{columns}[t]
 \column{0.5\textwidth}
+{\small
 \begin{verbatim}
 int Find(int[] array, int query)
 {
@@ -91,17 +92,18 @@ int Find(int[] array, int query)
     int right=array.Length-1;
     while(left<right)
     {
-        var mid=(left+right)/2;
-        if (query<=array[mid])
-            left=mid;
+        var middle=(left+right)/2;
+        if (query<=array[middle])
+            right=middle;
         else
-            right=mid+1;
+            left=middle+1;
     }
     if (array[right]==query) 
         return right;
-    return -1;
+    return -1; 
 }
 \end{verbatim}
+}
 \column{0.5\textwidth}
 
 \only<2-3>{Утверждение. На каждой итерации значение {\tt right-left} уменьшается.\\[1cm]}

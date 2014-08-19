@@ -116,16 +116,16 @@ $$ \lim_{n\rightarrow\infty}\frac{f(n)}{g(n)}=\lim_{n\rightarrow\infty} (3+\sin 
 
 \begin{frame}\frametitle{Оценка сложности}
 \uncover<+->{$$
-f(n)=4n^2+kn+2
+f(n)=4n^2+k_1n+k_2\log n(n-1)+2
 $$}
 \uncover<+->{$$
 g(n)=n^2
 $$}
 \uncover<+->{$$
-\lim_{n\rightarrow\infty}\frac{4n^2+kn+2}{n^2}=
+\lim_{n\rightarrow\infty}\frac{4n^2+k_1n+k_2\log n(n-1)+2}{n^2}=
 $$}
 \uncover<+->{$$
-\lim_{n\rightarrow\infty}\frac{4n^2}{n^2}+\lim_{n\rightarrow\infty}\frac{kn}{n^2}+\lim_{n\rightarrow\infty}\frac{2}{n^2}=\uncover<+->{4}
+\lim_{n\rightarrow\infty}\frac{4n^2}{n^2}+\lim_{n\rightarrow\infty}\frac{k_1n}{n^2}+\lim_{n\rightarrow\infty}\frac{k_2 \log n(n-1)}{n^2}+\lim_{n\rightarrow\infty}\frac{2}{n^2}=\uncover<+->{4}
 $$}
 \uncover<+->{$$
 f(n)=\Theta(g(n))=\Theta\left(n^2\right)
@@ -144,13 +144,13 @@ var n=int.Parse(Console.ReadLine());
 
 var root=(int)Math.Sqrt(n);
 
-for (int i=2;i<root;i++)
+for (int i=2;i<=root;i++)
 
 \ \ \ if (n \% i == 0) 
 
 \ \ \ \{
 
-\ \ \ \ \ \ Console.WriteLine("yes");
+\ \ \ \ \ \ Console.WriteLine(i);
 
 \ \ \ \ \ \ return;
 
@@ -158,7 +158,7 @@ for (int i=2;i<root;i++)
 
 \ 
 
-Console.WriteLine("no");
+Console.WriteLine("N is prime");
 }
 
 \column{0.4\textwidth}
@@ -169,7 +169,7 @@ $$
 $$
 
 $$
-n=\Theta\left(10^{|x|}\right)
+\uncover<+->{n=\Theta\left(10^{|x|}\right)}
 $$
 
 $$

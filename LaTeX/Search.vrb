@@ -1,0 +1,34 @@
+\frametitle{Алгоритм бинарного поиска}
+\begin{columns}[t]
+\column{0.5\textwidth}
+{\small
+\begin{verbatim}
+int Find(int[] array, int query)
+{
+    int left=0;
+    int right=array.Length-1;
+    while(left<right)
+    {
+        var middle=(left+right)/2;
+        if (query<=array[middle])
+            right=middle;
+        else
+            left=middle+1;
+    }
+    if (array[right]==query)
+        return right;
+    return -1;
+}
+\end{verbatim}
+}
+\column{0.5\textwidth}
+
+\only<2-3>{Утверждение. На каждой итерации значение {\tt right-left} уменьшается.\\[1cm]}
+\only<3>{Следовательно, рано или поздно оно станет неположительным, т.е. условие {\tt left<right} нарушится.}
+\only<4-5>{Утверждение. Если в массиве есть искомые значения, то на каждой итерации хотя бы одно из них находится между индексов {\tt left} и {\tt right}\\ [1cm]}
+\only<5>{Следовательно, если по завершению массива значение не обнаружено, то его не было в исходном массиве.}
+\only<6-8>{Утверждение. На каждой итерации значение {\tt left-right} уменьшается не менее чем вдвое.\\[1cm]}
+\only<7-8>{Утверждение. Если последовательно уменьшать число $N$ путем целочисленного деления на $2$, то в ноль оно обратится не позже, чем через $\lfloor \log_2 N\rfloor+1$ шагов\\[1cm]}
+\only<8>{Следовательно, алгоритм совершит порядка $\log {\tt array.Length}$ шагов, и имеет оценку сложности $\Theta(\log_n)$.}
+
+\end{columns}

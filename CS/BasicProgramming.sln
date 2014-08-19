@@ -29,6 +29,12 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Library", "Модуль 01 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestProject", "Модуль 01 - Введение в C Sharp\Лекция 06 - Автоматическое тестирование\TestProject\TestProject.csproj", "{818F6BFF-622C-469E-B0DD-8025A230598E}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Модуль 02 - Анализ алгоритмов", "Модуль 02 - Анализ алгоритмов", "{2567B58A-84B0-481D-89B8-15663574F582}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Лекция 09 - Поиск и сортировка", "Lecture09\Лекция 09 - Поиск и сортировка.csproj", "{7900BA67-EB6F-4FF5-9379-8D9A01735167}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Лекция 08 - Рекурсия и переборные алгоритмы", "Lecture08\Лекция 08 - Рекурсия и переборные алгоритмы.csproj", "{C4C2E847-53E9-4466-9DC1-A63AB68C78F4}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -139,6 +145,26 @@ Global
 		{818F6BFF-622C-469E-B0DD-8025A230598E}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
 		{818F6BFF-622C-469E-B0DD-8025A230598E}.Release|Mixed Platforms.Build.0 = Release|Any CPU
 		{818F6BFF-622C-469E-B0DD-8025A230598E}.Release|x86.ActiveCfg = Release|Any CPU
+		{7900BA67-EB6F-4FF5-9379-8D9A01735167}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7900BA67-EB6F-4FF5-9379-8D9A01735167}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7900BA67-EB6F-4FF5-9379-8D9A01735167}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{7900BA67-EB6F-4FF5-9379-8D9A01735167}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{7900BA67-EB6F-4FF5-9379-8D9A01735167}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{7900BA67-EB6F-4FF5-9379-8D9A01735167}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7900BA67-EB6F-4FF5-9379-8D9A01735167}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7900BA67-EB6F-4FF5-9379-8D9A01735167}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{7900BA67-EB6F-4FF5-9379-8D9A01735167}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{7900BA67-EB6F-4FF5-9379-8D9A01735167}.Release|x86.ActiveCfg = Release|Any CPU
+		{C4C2E847-53E9-4466-9DC1-A63AB68C78F4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C4C2E847-53E9-4466-9DC1-A63AB68C78F4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C4C2E847-53E9-4466-9DC1-A63AB68C78F4}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{C4C2E847-53E9-4466-9DC1-A63AB68C78F4}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{C4C2E847-53E9-4466-9DC1-A63AB68C78F4}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{C4C2E847-53E9-4466-9DC1-A63AB68C78F4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C4C2E847-53E9-4466-9DC1-A63AB68C78F4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C4C2E847-53E9-4466-9DC1-A63AB68C78F4}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{C4C2E847-53E9-4466-9DC1-A63AB68C78F4}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{C4C2E847-53E9-4466-9DC1-A63AB68C78F4}.Release|x86.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -156,5 +182,7 @@ Global
 		{23E6761F-FF7C-465D-B910-712BDF1709B2} = {9BE9A6CD-59DA-4B0E-922B-18C2B682B9CF}
 		{71282F4A-4A50-4301-8947-FFD2C6E75C7B} = {9BE9A6CD-59DA-4B0E-922B-18C2B682B9CF}
 		{818F6BFF-622C-469E-B0DD-8025A230598E} = {9BE9A6CD-59DA-4B0E-922B-18C2B682B9CF}
+		{7900BA67-EB6F-4FF5-9379-8D9A01735167} = {2567B58A-84B0-481D-89B8-15663574F582}
+		{C4C2E847-53E9-4466-9DC1-A63AB68C78F4} = {2567B58A-84B0-481D-89B8-15663574F582}
 	EndGlobalSection
 EndGlobal
