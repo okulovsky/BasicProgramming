@@ -1,0 +1,199 @@
+\documentclass[24pt,pdf,hyperref={unicode},aspectratio=169]{beamer}
+\usepackage[utf8]{inputenc}
+\usepackage[russian]{babel}
+\usepackage{tikz}
+\begin{document}
+
+\begin{frame}[fragile]\frametitle{Дерево рекурсивных вызовов}
+\begin{columns}[t]
+\column{0.4\textwidth}
+
+\begin{verbatim}
+static void Make(int n)
+{
+    for (int i=n-1; i>=0; i--)
+    {
+        Console.Write(i + " ");
+        Make(i);
+    }
+}
+\end{verbatim}
+
+\column{0.5\textwidth}
+
+\uncover<+->{}
+\begin{tikzpicture}[y=-0.8cm]
+
+\uncover<+->{
+\node[draw] (Make2) at (0,0) {\tt Make(2)};
+}
+
+\uncover<+->{
+\node[draw] (Make21) at (-1,1) {\tt Make(1)};
+\draw (Make2) edge[->] (Make21);
+}
+
+\uncover<+->{
+\node[draw] (Make210) at (-1,2) {\tt Make(0)};
+\draw (Make21) edge[->] (Make210);
+}
+
+\uncover<+->{
+\node[draw] (Make20) at (1,1) {\tt Make(0)};
+\draw (Make2) edge[->] (Make20);
+}
+
+\uncover<+->{
+\node[draw] (Make3) at (1,-1) {\tt Make(3)};
+\draw (Make3) edge[->] (Make2);
+}
+
+\uncover<+->{
+\node[draw] (Make31) at (3,1) {\tt Make(1)};
+\draw (Make3) edge[->] (Make31);
+}
+
+\uncover<+->{
+\node[draw] (Make310) at (3,2) {\tt Make(0)};
+\draw (Make31) edge[->] (Make310);
+}
+
+\uncover<+->{
+\node[draw] (Make30) at (5,1) {\tt Make(0)};
+\draw (Make3) edge[->] (Make30);
+}
+\end{tikzpicture}
+
+\uncover<+->{$$
+p(0)=1
+$$}
+
+\uncover<+->{$$
+p(n)=1+\sum_{i=0}^{n-1} p(i)
+$$}
+
+\end{columns}
+\end{frame}
+
+\begin{frame}\frametitle{Расчет количества вызовов}
+\uncover<+->{$$
+p(0)=1
+$$}
+\uncover<+->{$$
+p(n)=1+\sum_{i=0}^{n-1} p(i)
+$$}
+\uncover<+->{$$
+p(0)=1,\ p(1)=1+1=2,\ p(2)=1+2+1=4,\ p(3)=1+4+2+1=8,\ p(4)=16
+$$}
+\uncover<+->{$$
+p(n)=2^n?
+$$}
+\uncover<+->{$$
+1+\sum_{i=0}^{n-1} 2^i=1+2^n-1=2^n
+$$}
+
+\end{frame}
+
+\begin{frame}[fragile]\frametitle{Дерево рекурсивных вызовов}
+\begin{columns}[t]
+\column{0.4\textwidth}
+
+\begin{verbatim}
+static int Make(int x, int y)
+{
+	if (x<=0 || y<=0) return 1;
+	return Make(x-1,y)+Make(x,y-1);
+}
+\end{verbatim}
+
+\column{0.5\textwidth}
+
+\newcommand{\nn}[3]{\node[draw] (M#3) at (#2) {(#1)};}
+\newcommand{\nnc}[4]{
+\uncover<+->{
+\nn{#1}{#2}{#3} 
+
+\draw (M#4) edge[->] (M#3);
+}}
+
+\uncover<+->{}
+\begin{tikzpicture}[x=1.3cm]
+\uncover<+->{
+\nn{2,2}{0,0}{22}
+}
+\nnc{1,2}{0,1}{12}{22}
+\nnc{0,2}{0,2}{02}{12}
+\nnc{1,1}{1,1}{11}{12}
+\nnc{0,1}{1,2}{01}{11}
+\nnc{1,0}{2,1}{10}{11}
+\nnc{2,1}{3,0}{21}{22}
+\nnc{1,1}{3,1}{11A}{21}
+\nnc{0,1}{3,2}{01A}{11A}
+\nnc{1,0}{4,1}{10A}{11A}
+\nnc{2,0}{4,0}{20B}{21}
+\end{tikzpicture}
+\end{columns}
+\end{frame}
+
+\begin{frame}\frametitle{Расчет количества итераций}
+$$
+p(0,y)=1
+$$
+$$
+p(x,0)=1
+$$
+\uncover<+->{$$
+p(x,y)=1+p(x-1,y)+p(x,y-1)
+$$}
+\only<+>{$$
+\begin{array}{c|c c c c c}
+  & 0 & 1 & 2 & 3 & 4 \\
+\hline
+0 & 1 & 1 & 1 & 1 & 1 \\
+1 & 1 & 3 & 5 & 7 & 9 \\
+2 & 1 & 5 & 11 & 18 & 28 \\
+3 & 1 & 7 & 18 & 37 & 66 \\
+4 & 1 & 9 & 28 & 66 & 133 
+\end{array}
+$$}
+\uncover<+->{$$
+p(x,y)\le 3^{x+y}
+$$}
+\uncover<+->{$$
+p(0,0)=1\le 3^0
+$$}
+\uncover<+->{$$
+p(x,y)=1+p(x-1,y)+p(x,y-1)\le 3^{x+y-1}+3^{x+y-1}+3^{x+y-1} = 3^{x+y}
+$$}
+
+
+\end{frame}
+
+\begin{frame}\frametitle{Расчет количества итераций}
+$$
+p'(0,y)=1
+$$
+$$
+p'(x,0)=1
+$$
+$$
+p'(x,y)=p'(x-1,y)+p'(x,y-1)<p(x,y)
+$$
+\uncover<+->{$$
+\begin{array}{c|c c c c c}
+  & 0 & 1 & 2 & 3 & 4 \\
+\hline
+0 & 1 & 1 & 1 & 1 & 1 \\
+1 & 1 & 2 & 3 & 4 & 5 \\
+2 & 1 & 3 & 6 & 10 & 15 \\
+3 & 1 & 4 & 10 & 20 & 35 \\
+4 & 1 & 5 & 15 & 35 & 70 
+\end{array}
+$$}
+\uncover<+->{
+$$
+p'(x,y)=C^{x}_{x+y}=\frac{(x+y)!}{x!y!}
+$$}
+\end{frame}
+
+\end{document}

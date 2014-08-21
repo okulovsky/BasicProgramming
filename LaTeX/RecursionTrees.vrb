@@ -1,0 +1,39 @@
+\frametitle{Дерево рекурсивных вызовов}
+\begin{columns}[t]
+\column{0.4\textwidth}
+
+\begin{verbatim}
+static int Make(int x, int y)
+{
+if (x<=0 || y<=0) return 1;
+return Make(x-1,y)+Make(x,y-1);
+}
+\end{verbatim}
+
+\column{0.5\textwidth}
+
+\newcommand{\nn}[3]{\node[draw] (M#3) at (#2) {(#1)};}
+\newcommand{\nnc}[4]{
+\uncover<+->{
+\nn{#1}{#2}{#3}
+
+\draw (M#4) edge[->] (M#3);
+}}
+
+\uncover<+->{}
+\begin{tikzpicture}[x=1.3cm]
+\uncover<+->{
+\nn{2,2}{0,0}{22}
+}
+\nnc{1,2}{0,1}{12}{22}
+\nnc{0,2}{0,2}{02}{12}
+\nnc{1,1}{1,1}{11}{12}
+\nnc{0,1}{1,2}{01}{11}
+\nnc{1,0}{2,1}{10}{11}
+\nnc{2,1}{3,0}{21}{22}
+\nnc{1,1}{3,1}{11A}{21}
+\nnc{0,1}{3,2}{01A}{11A}
+\nnc{1,0}{4,1}{10A}{11A}
+\nnc{2,0}{4,0}{20B}{21}
+\end{tikzpicture}
+\end{columns}

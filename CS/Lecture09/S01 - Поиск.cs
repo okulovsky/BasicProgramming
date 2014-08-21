@@ -50,20 +50,14 @@ namespace Slide01
         {
             var left = 0;
             var right = array.Length - 1;
-            while (left <= right)
+            while (left < right)
             {
                 var middle = (right + left) / 2;
-                if (array[middle] == element) return middle;
-                if (array[middle] < element) left = middle + 1;
-                else right = middle - 1;
+                if (element <= array[middle]) 
+                    right = middle;
+                else left = middle+1;
             }
             return -1;
-        }
-
-        static void Main1()
-        {
-            var array = GenerateSortedArray(100);
-            Console.WriteLine(BinarySearch(array, array[49]));
         }
 
         #endregion
@@ -73,7 +67,7 @@ namespace Slide01
         static void MeasureTime(int[] array, Func<int[], int, int> searchProcedure, Series series)
         {
             searchProcedure(array, array[random.Next(array.Length)]);
-            var repetitions = 100;
+            var repetitions = 1000;
             var watch = new Stopwatch();
             watch.Start();
             for (int i = 0; i < repetitions; i++)
@@ -100,16 +94,17 @@ namespace Slide01
 
             linearGraph.ChartType = SeriesChartType.FastLine;
             linearGraph.Color = Color.Red;
-            linearGraph.MarkerBorderWidth = 3;
+
 
             binaryGraph.ChartType = SeriesChartType.FastLine;
             binaryGraph.Color = Color.Green;
             binaryGraph.BorderWidth = 3;
 
-            //chart.Series.Add(linearGraph);
+            chart.Series.Add(linearGraph);
             chart.Series.Add(binaryGraph);
             chart.Dock = System.Windows.Forms.DockStyle.Fill;
             var form = new Form();
+            form.ClientSize = new Size(800, 600);
             form.Controls.Add(chart);
             Application.Run(form);
 

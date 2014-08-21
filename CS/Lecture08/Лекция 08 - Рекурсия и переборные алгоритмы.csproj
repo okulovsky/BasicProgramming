@@ -43,8 +43,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Class1.cs" />
+    <Compile Include="S04 - Перебор подмножеств.cs" />
     <Compile Include="S01 - Рекурсия.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="S05 - Перебор сочетаний.cs" />
+    <Compile Include="S05 - Перебор перестановок.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="S02 - Карта памяти рекурсии.odp" />
