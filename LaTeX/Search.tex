@@ -117,6 +117,50 @@ int Find(int[] array, int query)
 \end{columns}
 \end{frame}
 
+\begin{frame}
+
+$$
+\frac{l+r}{2}=l+\frac{r-l}{2}
+$$
+
+Вариант 1.
+
+$$
+r'=l+\frac{r-l}{2},\ l'=l
+$$
+
+$$
+r'-l'=l+\frac{r-l}{2}-l=\frac{r-l}{2}<r-l
+$$
+
+Вариант 2.
+
+$$
+r'=r,\ l'=1+l+\frac{r-l}{2}
+$$
+
+$$
+r'-l'=r-l-\frac{r-l}{2}-1<\frac{r-l}{2}<r-l
+$$
+
+\end{frame}
+
+\begin{frame}
+
+$$
+l=\lceil \log_2 N \rceil +1
+$$
+
+$$
+2^l>N
+$$
+
+$$
+1=\frac{2^l}{2^l}>\frac{N}{2^l}
+$$
+
+\end{frame}
+
 \begin{frame}\frametitle{Анализ алгоритма}
 
 \begin{enumerate}
