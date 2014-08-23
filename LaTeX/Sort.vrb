@@ -1,14 +1,38 @@
 \frametitle{Пузырьковая сортировка}
+\begin{columns}
+\column{0.6\textwidth}
 \begin{verbatim}
 void Sort(int[] array)
 {
-    for (int i=1;i<array.Length;i++)
-        for (int j=0;j<i;j++)
-            if (array[j]>array[j+1])
+    for (int i=array.Length-1;i>0;i--)
+        for (int j=1;j<=i;j++)
+            if (array[j-1]>array[j])
             {
-                var temp=array[j];
-                array[j]=array[j+1];
-                array[j+1]=temp;
+                var temp=array[j-1];
+                array[j-1]=array[j];
+                array[j]=temp;
             }
 }
+
 \end{verbatim}
+\column{0.4\textwidth}
+
+
+{\large
+\aaa{52341}
+\aaaa{25341}{4}{0}
+\aaaa{23541}{4}{1}
+\aaaa{23451}{4}{2}
+\aaaa{23415}{4}{3}
+
+\aaaa{23415}{3}{0}
+\aaaa{23415}{3}{1}
+\aaaa{23145}{3}{2}
+
+\aaaa{23145}{2}{0}
+\aaaa{21345}{2}{1}
+
+\aaaa{12345}{1}{0}
+}
+
+\end{columns}

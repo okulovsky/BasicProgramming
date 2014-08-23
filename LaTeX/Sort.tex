@@ -2,39 +2,125 @@
 \usepackage[utf8]{inputenc}
 \usepackage[russian]{babel}
 \usepackage{xstring}
+\usepackage{tikz}
 \begin{document}
 
-\begin{frame}[fragile]\frametitle{Пузырьковая сортировка}
-\begin{verbatim}
-void Sort(int[] array)
-{
-    for (int i=1;i<array.Length;i++)
-        for (int j=0;j<i;j++)
-            if (array[j]>array[j+1])
-            {
-                var temp=array[j];
-                array[j]=array[j+1];
-                array[j+1]=temp;
-            }    
-}
-\end{verbatim}
-\end{frame}
 
-\newcommand{\aaa}[1]{
-\only<+>{\begin{tabular}{c c c c c c}
+\newcommand{\arr}[1]{\begin{tabular}{c c c c c}
 \StrMid{#1}{1}{1} & 
 \StrMid{#1}{2}{2} & 
 \StrMid{#1}{3}{3} & 
 \StrMid{#1}{4}{4} & 
-\StrMid{#1}{5}{5} & 
-\StrMid{#1}{6}{6} \\
-\end{tabular}
+\StrMid{#1}{5}{5} \\
+\end{tabular}}
+
+\newcommand{\aaa}[1]{\only<+>{\arr{#1}}}
+
+\newcommand{\aaaa}[3]{\only<+>{
+
+$i=#2$,\ $j=#3$\\[1cm]
+
+
+\arr{#1}
 }}
 
-\begin{frame}
 
-\aaa{123456}
-\aaa{123456}
+\begin{frame}[fragile]\frametitle{Пузырьковая сортировка}
+\begin{columns}
+\column{0.6\textwidth}
+\begin{verbatim}
+void Sort(int[] array)
+{
+    for (int i=array.Length-1;i>0;i--)
+        for (int j=1;j<=i;j++)
+            if (array[j-1]>array[j])
+            {
+                var temp=array[j-1];
+                array[j-1]=array[j];
+                array[j]=temp;
+            }    
+}
+
+\end{verbatim}
+\column{0.4\textwidth}
+
+
+{\large
+\aaa{52341}
+\aaaa{25341}{4}{0}
+\aaaa{23541}{4}{1}
+\aaaa{23451}{4}{2}
+\aaaa{23415}{4}{3}
+
+\aaaa{23415}{3}{0}
+\aaaa{23415}{3}{1}
+\aaaa{23145}{3}{2}
+
+\aaaa{23145}{2}{0}
+\aaaa{21345}{2}{1}
+
+\aaaa{12345}{1}{0}
+}
+
+\end{columns}
 \end{frame}
+
+
+\begin{frame}
+$$
+\begin{array}{c c}
+\begin{array}{c c c}
+\uncover<1-2>{\downarrow}  & \uncover<3-6>{\downarrow}  & \uncover<7>{\downarrow}  \\
+1 & 2 & 6 \\
+3 & 4 & 5 \\
+\uncover<1-4>{\uparrow}  &  \uncover<5>{\uparrow} & \uncover<6->{\uparrow} 
+\end{array} &
+\ \ \ \ \ \uncover<2->{1} \ \uncover<3->{2} \ \uncover<4->{3} \ \uncover<5->{4} \ \uncover<6->{5} \ \uncover<7->{6} 
+\end{array}
+$$
+
+\end{frame}
+
+\begin{frame}
+\begin{center}
+\begin{tikzpicture}[y=-1cm]
+
+\uncover<1->{
+\node[draw=black] (a15) at (0,0) {\only<1-7>{$3\ 5\ 2\ 4\ 1$}\only<8->{$1\ 2\ 3\ 4\ 5$}};
+}
+
+\uncover<2->{
+\node[draw=black] (a12) at (-2,1){ $3\ 5$};
+\node[draw=black] (a35) at (2,1) {\only<1-6>{$2\ 4\ 1$}\only<7->{$1\ 2\ 4$}};
+\draw (a15) edge[->] (a12);
+\draw (a15) edge[->] (a35);
+}
+
+\uncover<3->{
+\node[draw=black] (a1) at (-3,2) {$3$};
+\node[draw=black] (a2) at (-1,2) {$5$};
+\draw (a12) edge[->] (a1);
+\draw (a12) edge[->] (a2);
+}
+
+\uncover<4->{
+\node[draw=black] (a3) at (1,2) {$2$};
+\node[draw=black] (a45) at (3,2) {\only<1-5>{$4\ 1$}\only<6->{$1\ 4$}};
+\draw (a35) edge[->] (a3);
+\draw (a35) edge[->] (a45);
+}
+
+\uncover<5->{
+\node[draw=black] (a4) at (2,3) {$4$};
+\node[draw=black] (a5) at (4,3) {$1$};
+\draw (a45) edge[->] (a4);
+\draw (a45) edge[->] (a5);
+}
+
+\end{tikzpicture}
+\end{center}
+\end{frame}
+
+
 
 \end{document}
