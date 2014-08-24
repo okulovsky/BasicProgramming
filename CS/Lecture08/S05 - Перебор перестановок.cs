@@ -50,7 +50,7 @@ namespace S05
             }
         }
 
-        static void Main()
+        static void MainX()
         {
             MakePermutations(new int[4], 0);
         }

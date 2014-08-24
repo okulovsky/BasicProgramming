@@ -33,7 +33,7 @@ namespace S04
             subset[position] = true;
             MakeSubsets(subset, position + 1);
         }
-        static void Main()
+        static void MainX()
         {
             MakeSubsets(new bool[weights.Length], 0);
         }

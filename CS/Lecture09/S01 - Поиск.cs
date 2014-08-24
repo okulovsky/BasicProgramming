@@ -27,7 +27,7 @@ namespace Slide01
             return -1;
         }
 
-        public static void Main0()
+        public static void MainLinear()
         {
             var array = GenerateArray(100);
             Console.WriteLine(LinearSearch(array, array[40]));
@@ -60,6 +60,11 @@ namespace Slide01
             return -1;
         }
 
+        public static void MainBinary()
+        {
+            var array = GenerateSortedArray(100);
+            Console.WriteLine(BinarySearch(array, array[40]));
+        }
         #endregion
 
         #region Сравнение времени
@@ -76,7 +81,7 @@ namespace Slide01
             series.Points.Add(new DataPoint(array.Length, (float)watch.ElapsedTicks / repetitions));
         }
 
-        public static void Main()
+        public static void MainX()
         {
             var linearGraph = new Series();
             var binaryGraph = new Series();

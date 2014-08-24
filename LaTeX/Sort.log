@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2014.4.2)  24 AUG 2014 15:13
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2014.4.2)  24 AUG 2014 18:06
 entering extended mode
 **Sort.tex
 (C:\Users\yura\Desktop\BasicProgramming\LaTeX\Sort.tex
@@ -1450,16 +1450,44 @@ Overfull \vbox (0.75833pt too high) detected at line 109
 ]
 (C:\Users\yura\Desktop\BasicProgramming\LaTeX\Sort.vrb) [28
 
+] [29
+
+] [30
+
+] [31
+
+]
+[32
+
+] [33
+
+] [34
+
+] [35
+
+] [36
+
+] [37
+
+] [38
+
+] [39
+
+] [40
+
+]
+(C:\Users\yura\Desktop\BasicProgramming\LaTeX\Sort.vrb) [41
+
 ]
 \tf@nav=\write7
 \tf@toc=\write8
 \tf@snm=\write9
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 166.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 166.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 212.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 212.
 
 (C:\Users\yura\Desktop\BasicProgramming\LaTeX\Sort.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 166.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 166.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 212.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 212.
 Package rerunfilecheck Info: File `Sort.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
 
@@ -1467,13 +1495,13 @@ Package rerunfilecheck Info: File `Sort.out' has not changed.
 LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 1.0pt have occurred.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 166.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 212.
  ) 
 Here is how much of TeX's memory you used:
- 23857 strings out of 493921
- 430174 string characters out of 3155707
+ 23889 strings out of 493921
+ 430559 string characters out of 3155707
  486838 words of memory out of 3000000
- 26573 multiletter control sequences out of 15000+200000
+ 26577 multiletter control sequences out of 15000+200000
  17297 words of font info for 51 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
  56i,14n,59p,412b,761s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -1484,9 +1512,9 @@ t2a\dpi600\latt1095.pk> <C:\Users\yura\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour
 \lh\lh-t2a\dpi600\lass1440.pk><C:/tex/fonts/type1/public/amsfonts/cm/cmss10.pfb
 ><C:/tex/fonts/type1/public/amsfonts/cm/cmss12.pfb><C:/tex/fonts/type1/public/a
 msfonts/cm/cmssi12.pfb><C:/tex/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
-Output written on Sort.pdf (28 pages, 221574 bytes).
+Output written on Sort.pdf (41 pages, 290174 bytes).
 PDF statistics:
- 869 PDF objects out of 1000 (max. 8388607)
- 57 named destinations out of 1000 (max. 500000)
+ 1208 PDF objects out of 1440 (max. 8388607)
+ 83 named destinations out of 1000 (max. 500000)
  43 words of extra memory for PDF output out of 10000 (max. 10000000)
 
