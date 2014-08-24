@@ -66,7 +66,7 @@ void Sort(int[] array)
 \end{frame}
 
 
-\begin{frame}
+\begin{frame}\frametitle{Слияние}
 $$
 \begin{array}{c c}
 \begin{array}{c c c}
@@ -81,7 +81,34 @@ $$
 
 \end{frame}
 
-\begin{frame}
+\begin{frame}[fragile]
+\begin{small}
+\begin{verbatim}
+static void Merge(int[] array, int start, int middle, int end)
+{
+var leftPtr = start;
+var rightPtr = middle + 1;
+var length = end - start + 1;
+for (int i = 0; i < length; i++)
+    if ( rightPtr > end || 
+         (leftPtr <= middle && array[leftPtr] < array[rightPtr]))
+    {
+        temporaryArray[i] = array[leftPtr];
+        leftPtr++;
+    }
+    else 
+    {
+        temporaryArray[i] = array[rightPtr];
+        rightPtr++;
+    }
+
+for (int i = 0; i < length; i++) array[i + start] = temporaryArray[i];
+}
+\end{verbatim}
+\end{small}
+\end{frame}
+
+\begin{frame}\frametitle{Сортировка слиянием}
 \begin{center}
 \begin{tikzpicture}[y=-1cm]
 
@@ -121,6 +148,19 @@ $$
 \end{center}
 \end{frame}
 
+
+\begin{frame}[fragile]\frametitle{Сортировка слиянием}
+\begin{verbatim}
+static void MergeSort(int[] array, int start, int end)
+{
+    if (start == end) return;
+    var middle = (start + end) / 2;
+    MergeSort(array, start, middle);
+    MergeSort(array, middle + 1, end);
+    Merge(array, start, middle, end);
+}
+\end{verbatim}
+\end{frame}
 
 
 \end{document}

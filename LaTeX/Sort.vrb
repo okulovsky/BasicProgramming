@@ -1,38 +1,11 @@
-\frametitle{Пузырьковая сортировка}
-\begin{columns}
-\column{0.6\textwidth}
+\frametitle{Сортировка слиянием}
 \begin{verbatim}
-void Sort(int[] array)
+static void MergeSort(int[] array, int start, int end)
 {
-    for (int i=array.Length-1;i>0;i--)
-        for (int j=1;j<=i;j++)
-            if (array[j-1]>array[j])
-            {
-                var temp=array[j-1];
-                array[j-1]=array[j];
-                array[j]=temp;
-            }
+    if (start == end) return;
+    var middle = (start + end) / 2;
+    MergeSort(array, start, middle);
+    MergeSort(array, middle + 1, end);
+    Merge(array, start, middle, end);
 }
-
 \end{verbatim}
-\column{0.4\textwidth}
-
-
-{\large
-\aaa{52341}
-\aaaa{25341}{4}{0}
-\aaaa{23541}{4}{1}
-\aaaa{23451}{4}{2}
-\aaaa{23415}{4}{3}
-
-\aaaa{23415}{3}{0}
-\aaaa{23415}{3}{1}
-\aaaa{23145}{3}{2}
-
-\aaaa{23145}{2}{0}
-\aaaa{21345}{2}{1}
-
-\aaaa{12345}{1}{0}
-}
-
-\end{columns}
