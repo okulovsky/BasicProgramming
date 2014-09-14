@@ -41,6 +41,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Copy %282%29 of Template.cs" />
+    <Compile Include="Copy %283%29 of Template.cs" />
+    <Compile Include="Copy %284%29 of Template.cs" />
+    <Compile Include="S04 - Статические и динамические поля.cs" />
+    <Compile Include="PresentationTemplate.cs" />
     <Compile Include="S02 - создание класса.cs" />
     <Compile Include="S01 - постановка проблемы.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -48,6 +53,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <None Include="S03 - карта памяти.odp" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

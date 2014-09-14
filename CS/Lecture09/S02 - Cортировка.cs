@@ -37,26 +37,26 @@ namespace Slide03
 
         #region Быстрая сортировка
 
-        static void HoareSort(int[] array, int start, int end)
+static void HoareSort(int[] array, int start, int end)
+{
+    if (end == start) return;
+    var pivot=array[end];
+    var storeIndex=start;
+    for (int i=start;i<=end-1;i++)
+        if (array[i]<=pivot)
         {
-            if (end == start) return;
-            var pivot=array[end];
-            var storeIndex=start;
-            for (int i=start;i<=end-1;i++)
-                if (array[i]<=pivot)
-                {
-                    var t=array[i];
-                    array[i]=array[storeIndex];
-                    array[storeIndex]=t;
-                    storeIndex++;
-                }
-
-            var n = array[storeIndex];
-            array[storeIndex] = array[end];
-            array[end] = n;
-            if (storeIndex > start) HoareSort(array, start, storeIndex - 1);
-            if (storeIndex < end) HoareSort(array, storeIndex + 1, end);
+            var t=array[i];
+            array[i]=array[storeIndex];
+            array[storeIndex]=t;
+            storeIndex++;
         }
+
+    var n = array[storeIndex];
+    array[storeIndex] = array[end];
+    array[end] = n;
+    if (storeIndex > start) HoareSort(array, start, storeIndex - 1);
+    if (storeIndex < end) HoareSort(array, storeIndex + 1, end);
+}
 
         static void HoareSort(int[] array)
         {
