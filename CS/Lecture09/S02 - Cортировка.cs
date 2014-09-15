@@ -16,7 +16,7 @@ namespace Slide03
         {
             var array = new int[length];
             for (int i = 0; i < array.Length; i++)
-                array[i] = random.Next(20);
+                array[i] = i;
             return array;
         }
 
@@ -64,7 +64,7 @@ namespace Slide03
         }
 
 
-        public static void Main()
+        public static void MainHoare()
         {
             var array = GenerateArray(10);
             HoareSort(array);
@@ -146,13 +146,13 @@ namespace Slide03
             GC.Collect();
         }
 
-        public static void MainX()
+        public static void Main()
         {
             var bubble = new Series();
             var hoare = new Series();
             var merge = new Series();
 
-            for (int i = 1000; i <= 10000; i += 1000)
+            for (int i = 100; i <= 1000; i += 100)
             {
                 var array = GenerateArray(i);
                 MeasureTime(array, BubbleSort, bubble);
