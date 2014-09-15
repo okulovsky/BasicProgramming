@@ -8,7 +8,7 @@ namespace Slide01
     {
         static void PrintStudent(string firstName, string lastName)
         {
-            Console.WriteLine("{0,-15}, {1}", firstName, lastName);
+            Console.WriteLine("{0,-15}{1}", firstName, lastName);
         }
 
         static string[] firstNames;
@@ -28,8 +28,7 @@ namespace Slide01
         /* Это плохо:
          * - нет никакой синтаксической гарантии, что firstNames и lastNames одной длины,
          *   что по одному индексу хранятся данные об одном человеке
-         * - при добавлении новой информации о студенте (например, bool dormitoryRequired)
-         *   придется переписывать всю программу
+         * - при добавлении новой информации о студенте (например, int Age) придется переписывать всю программу
          * - при большом количестве новой информации, количество аргументов PrintStudent
          *   будет большим, а вызов этого метода станет неудобным.
          */
