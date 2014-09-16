@@ -2,15 +2,19 @@
 using System;
 using System.Threading;
 delegate void MyAction(ref int value);
-using Student=Slide02.Student;
+class RTriangle { public double H; public double[] C; public static double Angle; } 
 
 class Program
 {
     static void Main()
     {
-        var s=new Student[2];
-        s[0]=new Student();
-        s[0].FirstName="John";
-        s[0].Age=18;
+        var tr1 = new RTriangle();
+        tr1.H = 5;
+        tr1.C = new double[2];
+        tr1.C[0] = 3;
+        var tr2 = new RTriangle();
+        tr2.H = 10;
+        Console.WriteLine(
+            RTriangle.Angle);
     }
 }

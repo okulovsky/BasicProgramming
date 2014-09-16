@@ -36,9 +36,6 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Лекция 08 - Рекурсия и переборные алгоритмы", "Lecture08\Лекция 08 - Рекурсия и переборные алгоритмы.csproj", "{C4C2E847-53E9-4466-9DC1-A63AB68C78F4}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Модуль 03 - Введение в ООП", "Модуль 03 - Введение в ООП", "{6921007F-A12B-46C2-8CD3-C2A911E983BB}"
-	ProjectSection(SolutionItems) = preProject
-		Модуль 01 - Введение в C Sharp\Лекция 05 - Коллекции, строки и файлы\S04 - Передача строк в метод.odp = Модуль 01 - Введение в C Sharp\Лекция 05 - Коллекции, строки и файлы\S04 - Передача строк в метод.odp
-	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Лекция 10 - Инкапсуляция", "Lecture10\Лекция 10 - Инкапсуляция.csproj", "{F0413383-C770-41C7-8D3A-D30BEB0B5BD6}"
 EndProject
