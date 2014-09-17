@@ -14,7 +14,7 @@ namespace Slide01
         static string[] firstNames;
         static string[] lastNames;
 
-        static void Main()
+        static void MainX()
         {
             firstNames = new string[2];
             lastNames = new string[2];

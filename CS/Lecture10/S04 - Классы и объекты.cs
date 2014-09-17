@@ -12,7 +12,7 @@ namespace Slide04
 
     public class Program
     {
-        static void Main()
+        static void MainX()
         {
             // Создание объекта-треугольника.
             

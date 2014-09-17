@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{F0413383-C770-41C7-8D3A-D30BEB0B5BD6}</ProjectGuid>
+    <ProjectGuid>{A9A2686C-587F-420D-AFB7-76085DD94172}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Lecture10</RootNamespace>
-    <AssemblyName>Lecture10</AssemblyName>
+    <RootNamespace>Lecture11</RootNamespace>
+    <AssemblyName>Lecture11</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -41,19 +41,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="S08 - методы расширения.cs" />
-    <Compile Include="S06 - Статические и динамические методы.cs" />
-    <Compile Include="S04 - Классы и объекты.cs" />
-    <Compile Include="PresentationTemplate.cs" />
-    <Compile Include="S02 - создание класса.cs" />
-    <Compile Include="S01 - постановка проблемы.cs" />
+    <Compile Include="S06 - Метод ToString.cs" />
+    <Compile Include="S04 - Интерфейс IComparer.cs" />
+    <Compile Include="S03 - Интерфейс IComparable.cs" />
+    <Compile Include="S02 - Наследование.cs" />
+    <Compile Include="S01 - Постановка проблемы.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Template.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-    <None Include="S07 - Карта памяти.odp" />
-    <None Include="S05 - карта памяти.odp" />
-    <None Include="S03 - карта памяти.odp" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
