@@ -39,6 +39,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Модуль 03 - Введ�
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Лекция 10 - Инкапсуляция", "Lecture10\Лекция 10 - Инкапсуляция.csproj", "{F0413383-C770-41C7-8D3A-D30BEB0B5BD6}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lecture12a", "Lecture12a\Lecture12a.csproj", "{EE9C57D4-08BC-4538-9E06-58D003F2E306}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -179,6 +181,16 @@ Global
 		{F0413383-C770-41C7-8D3A-D30BEB0B5BD6}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
 		{F0413383-C770-41C7-8D3A-D30BEB0B5BD6}.Release|Mixed Platforms.Build.0 = Release|Any CPU
 		{F0413383-C770-41C7-8D3A-D30BEB0B5BD6}.Release|x86.ActiveCfg = Release|Any CPU
+		{EE9C57D4-08BC-4538-9E06-58D003F2E306}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EE9C57D4-08BC-4538-9E06-58D003F2E306}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EE9C57D4-08BC-4538-9E06-58D003F2E306}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{EE9C57D4-08BC-4538-9E06-58D003F2E306}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{EE9C57D4-08BC-4538-9E06-58D003F2E306}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{EE9C57D4-08BC-4538-9E06-58D003F2E306}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EE9C57D4-08BC-4538-9E06-58D003F2E306}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EE9C57D4-08BC-4538-9E06-58D003F2E306}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{EE9C57D4-08BC-4538-9E06-58D003F2E306}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{EE9C57D4-08BC-4538-9E06-58D003F2E306}.Release|x86.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -199,5 +211,6 @@ Global
 		{7900BA67-EB6F-4FF5-9379-8D9A01735167} = {2567B58A-84B0-481D-89B8-15663574F582}
 		{C4C2E847-53E9-4466-9DC1-A63AB68C78F4} = {2567B58A-84B0-481D-89B8-15663574F582}
 		{F0413383-C770-41C7-8D3A-D30BEB0B5BD6} = {6921007F-A12B-46C2-8CD3-C2A911E983BB}
+		{EE9C57D4-08BC-4538-9E06-58D003F2E306} = {6921007F-A12B-46C2-8CD3-C2A911E983BB}
 	EndGlobalSection
 EndGlobal
