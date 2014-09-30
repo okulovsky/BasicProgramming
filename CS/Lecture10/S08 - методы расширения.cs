@@ -1,11 +1,11 @@
 ﻿using System;
 
-namespace Slide00
+namespace Slide08
 {
 
     public class Program
     {
-        static double NextDouble(Random rnd, double min, double max)
+        static double MyNextDouble(Random rnd, double min, double max)
         {
             return rnd.NextDouble() * (max - min) + min;
         }
@@ -13,7 +13,7 @@ namespace Slide00
         static void MainX()
         {
             var rnd = new Random();
-            Console.WriteLine(NextDouble(rnd, 10, 20));
+            Console.WriteLine(MyNextDouble(rnd, 10, 20));
             Console.WriteLine(rnd.NextDouble(10, 20));
             var array = new int[] { 1, 2, 3, 4, 5 };
             array.Swap(0, 1);

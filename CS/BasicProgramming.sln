@@ -41,6 +41,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Лекция 10 - Инка�
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Лекция 11 - Наследование и интерфейсы", "Lecture11\Лекция 11 - Наследование и интерфейсы.csproj", "{A9A2686C-587F-420D-AFB7-76085DD94172}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Лекция 12 - Целостность данных и их защита", "Lecture12\Лекция 12 - Целостность данных и их защита.csproj", "{632E6523-32DC-428A-ACAE-EA634FE6B0F2}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -191,6 +193,16 @@ Global
 		{A9A2686C-587F-420D-AFB7-76085DD94172}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
 		{A9A2686C-587F-420D-AFB7-76085DD94172}.Release|Mixed Platforms.Build.0 = Release|Any CPU
 		{A9A2686C-587F-420D-AFB7-76085DD94172}.Release|x86.ActiveCfg = Release|Any CPU
+		{632E6523-32DC-428A-ACAE-EA634FE6B0F2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{632E6523-32DC-428A-ACAE-EA634FE6B0F2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{632E6523-32DC-428A-ACAE-EA634FE6B0F2}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{632E6523-32DC-428A-ACAE-EA634FE6B0F2}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{632E6523-32DC-428A-ACAE-EA634FE6B0F2}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{632E6523-32DC-428A-ACAE-EA634FE6B0F2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{632E6523-32DC-428A-ACAE-EA634FE6B0F2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{632E6523-32DC-428A-ACAE-EA634FE6B0F2}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{632E6523-32DC-428A-ACAE-EA634FE6B0F2}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{632E6523-32DC-428A-ACAE-EA634FE6B0F2}.Release|x86.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -212,5 +224,6 @@ Global
 		{C4C2E847-53E9-4466-9DC1-A63AB68C78F4} = {2567B58A-84B0-481D-89B8-15663574F582}
 		{F0413383-C770-41C7-8D3A-D30BEB0B5BD6} = {6921007F-A12B-46C2-8CD3-C2A911E983BB}
 		{A9A2686C-587F-420D-AFB7-76085DD94172} = {6921007F-A12B-46C2-8CD3-C2A911E983BB}
+		{632E6523-32DC-428A-ACAE-EA634FE6B0F2} = {6921007F-A12B-46C2-8CD3-C2A911E983BB}
 	EndGlobalSection
 EndGlobal

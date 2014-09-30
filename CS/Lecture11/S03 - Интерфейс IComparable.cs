@@ -2,23 +2,7 @@
 
 namespace S03
 {
-    public class Point : IComparable
-    {
-        public double X;
-        public double Y;
 
-        public int CompareTo(object obj)
-        {
-            var point = obj as Point;
-            var thisDistance = Math.Sqrt(X * X + Y * Y);
-            var thatDistance = Math.Sqrt(point.X * point.X + point.Y * point.Y);
-            return thisDistance.CompareTo(thatDistance);
-            //или
-            //if (thisDistance < thatDistance) return -1;
-            //else if (thisDistance == thatDistance) return 0;
-            //else return 1;
-        }
-    }
 
     public class Program
     {
@@ -48,6 +32,24 @@ namespace S03
                 new Point { X=1, Y=1},
                 new Point { X=2, Y=2}
             });
+        }
+    }
+
+    public class Point : IComparable
+    {
+        public double X;
+        public double Y;
+
+        public int CompareTo(object obj)
+        {
+            var point = obj as Point;
+            var thisDistance = Math.Sqrt(X * X + Y * Y);
+            var thatDistance = Math.Sqrt(point.X * point.X + point.Y * point.Y);
+            return thisDistance.CompareTo(thatDistance);
+            //или
+            //if (thisDistance < thatDistance) return -1;
+            //else if (thisDistance == thatDistance) return 0;
+            //else return 1;
         }
     }
 

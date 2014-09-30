@@ -18,7 +18,7 @@ namespace Slide06
 
     class Program
     {
-        public static void Main()
+        public static void MainX()
         {
             Point point = new Point { X = 1, Y = 2 };
             point.Print();
