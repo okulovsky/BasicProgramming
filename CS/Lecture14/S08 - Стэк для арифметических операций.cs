@@ -5,7 +5,7 @@ namespace Slide08
 {
     public class Program
     {
-        static void Main()
+        static void MainX()
         {
             Console.WriteLine(Compute("23+4*"));
         }

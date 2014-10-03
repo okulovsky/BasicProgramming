@@ -41,7 +41,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="S09 - Структуры и свойства - 1.cs" />
+    <Compile Include="S09 - Структуры и свойства.cs" />
     <Compile Include="S07 - Боксинг и анбоксинг.cs" />
     <Compile Include="S05 - Передача структуры в метод - 2.cs" />
     <Compile Include="S04 - Передача структуры в метод - 1.cs" />
