@@ -24,7 +24,7 @@ public class Program
     {
         point.X = 10;
     }
-    public static void Main()
+    public static void MainX()
     {
         var pointClass = new PointClass();
         ProcessClass(pointClass);
