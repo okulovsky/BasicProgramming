@@ -49,7 +49,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Модуль 04 - Стру�
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Лекция 14 - Стэки, очереди и дженерики", "Lecture14\Лекция 14 - Стэки, очереди и дженерики.csproj", "{F83C9928-938A-4672-8B6D-F25F7E764BFC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Лекция 15 - Листы и словари", "Lecture15\Лекция 15 - Листы и словари.csproj", "{84D7B066-1E95-4724-9987-6B8BC1C73AC1}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Лекция 16 - Листы и словари", "Lecture15\Лекция 16 - Листы и словари.csproj", "{84D7B066-1E95-4724-9987-6B8BC1C73AC1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Лекция 15 - yield return", "Lecture15a\Лекция 15 - yield return.csproj", "{16DCCD94-0CB3-418C-8EBE-0C825BB86CD0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -241,6 +243,16 @@ Global
 		{84D7B066-1E95-4724-9987-6B8BC1C73AC1}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
 		{84D7B066-1E95-4724-9987-6B8BC1C73AC1}.Release|Mixed Platforms.Build.0 = Release|Any CPU
 		{84D7B066-1E95-4724-9987-6B8BC1C73AC1}.Release|x86.ActiveCfg = Release|Any CPU
+		{16DCCD94-0CB3-418C-8EBE-0C825BB86CD0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{16DCCD94-0CB3-418C-8EBE-0C825BB86CD0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{16DCCD94-0CB3-418C-8EBE-0C825BB86CD0}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{16DCCD94-0CB3-418C-8EBE-0C825BB86CD0}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{16DCCD94-0CB3-418C-8EBE-0C825BB86CD0}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{16DCCD94-0CB3-418C-8EBE-0C825BB86CD0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{16DCCD94-0CB3-418C-8EBE-0C825BB86CD0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{16DCCD94-0CB3-418C-8EBE-0C825BB86CD0}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{16DCCD94-0CB3-418C-8EBE-0C825BB86CD0}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{16DCCD94-0CB3-418C-8EBE-0C825BB86CD0}.Release|x86.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -266,5 +278,6 @@ Global
 		{A80C66BE-F3A0-4FCF-A859-F5E016A5514C} = {6921007F-A12B-46C2-8CD3-C2A911E983BB}
 		{F83C9928-938A-4672-8B6D-F25F7E764BFC} = {C6A4ECAE-F974-4020-91E5-33CDA9B8B6FC}
 		{84D7B066-1E95-4724-9987-6B8BC1C73AC1} = {C6A4ECAE-F974-4020-91E5-33CDA9B8B6FC}
+		{16DCCD94-0CB3-418C-8EBE-0C825BB86CD0} = {C6A4ECAE-F974-4020-91E5-33CDA9B8B6FC}
 	EndGlobalSection
 EndGlobal

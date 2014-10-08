@@ -17,7 +17,7 @@ namespace Slide09
 
     public class Program
     {
-        static void Main()
+        static void MainX()
         {
             Point point;
             // point.X = 10; // Так писать нельзя. Сеттер - это метод, а метод
