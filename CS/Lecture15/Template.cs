@@ -1,12 +1,12 @@
 ﻿using System;
 
-namespace SlideXX
+namespace Slide00
 {
     public class Program
     {
-        static void Main()
+        static void MainX()
         {
-            
+
         }
     }
 }

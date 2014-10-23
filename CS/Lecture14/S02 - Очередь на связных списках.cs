@@ -4,7 +4,7 @@ namespace Slide02
 {
     public class QueueItem
     {
-        public string Value { get; set; }
+        public int Value { get; set; }
         public QueueItem Next { get; set; }
     }
 
@@ -13,7 +13,7 @@ namespace Slide02
         QueueItem head;
         QueueItem tail;
 
-        public void Enqueue(string value)
+        public void Enqueue(int value)
         {
             if (head == null)
                 tail = head = new QueueItem { Value = value, Next = null };
@@ -25,7 +25,7 @@ namespace Slide02
             }
         }
 
-        public string Dequeue()
+        public int Dequeue()
         {
             if (head == null) throw new InvalidOperationException();
             var result = head.Value;

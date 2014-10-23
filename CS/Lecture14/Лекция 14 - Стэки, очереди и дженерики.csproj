@@ -44,6 +44,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="S12 - Дженерики и возврат нескольких значений из метода.cs" />
+    <Compile Include="S11 - Дженерики и сортировка.cs" />
+    <Compile Include="S10 - Кастк интерфейсу в сортировке.cs" />
     <Compile Include="S09 - Очередь для скользящего среднего.cs" />
     <Compile Include="S08 - Стэк для арифметических операций.cs" />
     <Compile Include="S07 - Стэк для разбора строк.cs" />
@@ -58,6 +61,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <None Include="S025 - Карта памяти.odp" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
