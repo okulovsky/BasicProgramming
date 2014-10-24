@@ -41,6 +41,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="S08 - Алгоритм поиска подстроки.cs" />
     <Compile Include="S06 - переопределение операторов.cs" />
     <Compile Include="S01 - IEnumerable.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -52,6 +53,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <None Include="S07 - Хэш-функция.odp" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

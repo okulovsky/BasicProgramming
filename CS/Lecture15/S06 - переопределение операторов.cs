@@ -38,7 +38,7 @@ namespace Slide06
 
     class Program
     {
-        public static void Main()
+        public static void MainX()
         {
             var point1 = new Point { X = 1, Y = 2 };
             var point2 = new Point { X = 1, Y = 2 };
