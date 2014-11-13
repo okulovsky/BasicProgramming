@@ -41,7 +41,7 @@ namespace Slide08
             return -1;
         }
 
-        static void Main()
+        static void MainX()
         {
             Console.WriteLine(IndexOf("abcdefgh", "cde"));
 

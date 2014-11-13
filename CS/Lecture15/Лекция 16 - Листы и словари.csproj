@@ -49,11 +49,13 @@
     <Compile Include="S03 - неправильный Contains.cs" />
     <Compile Include="S04 - правильный Contains.cs" />
     <Compile Include="S05 - переопределение Contains.cs" />
+    <Compile Include="S10 - GetHashCode.cs" />
     <Compile Include="Template.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="S07 - Хэш-функция.odp" />
+    <None Include="S09 - Dictionary.odp" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
