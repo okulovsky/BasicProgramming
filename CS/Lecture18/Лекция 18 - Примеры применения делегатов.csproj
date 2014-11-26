@@ -45,12 +45,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="S07 - Архитектура LINQ.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="S01 - Замеры времени.cs" />
     <Compile Include="S02 - Стэк для арифметических операций - Copy.cs" />
     <Compile Include="S05 - Математика.cs" />
     <Compile Include="S04 - Генерация сценариев.cs" />
     <Compile Include="S03 - GUI.cs" />
+    <Compile Include="S06 - LINQ.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

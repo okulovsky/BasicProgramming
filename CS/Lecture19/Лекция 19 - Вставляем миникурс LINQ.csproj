@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>8570969e-603f-420b-97dd-b6ddf6d1c2d8</ProjectGuid>
+    <ProjectGuid>{DAF2A0DF-C11C-4119-A0C4-EA33A375F6B9}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Lecture19</RootNamespace>

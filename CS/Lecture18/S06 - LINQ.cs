@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 
-namespace Slide05
+namespace Slide06
 {
     public class Student
     {
