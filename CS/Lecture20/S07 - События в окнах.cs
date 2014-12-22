@@ -9,19 +9,22 @@ namespace Slide07
 		static void MainX()
 		{
 			var form = new Form();
-			var button = new Button
-			{
-				Text = "Click me!",
-				Dock = DockStyle.Fill
-			};
-			button.Click += 
-				(s, a) =>
-					{
-						MessageBox.Show("You clicked the button");
-					};
-			form.Controls.Add(button);
-			Application.Run(form);
+			form.FormClosing += (sender, args) =>
+				{
+					var result = MessageBox.Show("Действительно закрыть?", "", MessageBoxButtons.YesNo);
+					if (result != DialogResult.Yes) args.Cancel = true;
+				};
 
 		}
+	}
+
+	class MyWindow : Form
+	{
+		protected override void OnFormClosing(FormClosingEventArgs e)
+		{
+			var result = MessageBox.Show("Действительно закрыть?", "", MessageBoxButtons.YesNo);
+			if (result != DialogResult.Yes) e.Cancel = true;
+		}
+
 	}
 }

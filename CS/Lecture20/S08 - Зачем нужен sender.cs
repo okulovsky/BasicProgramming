@@ -2,52 +2,53 @@
 using System;
 using System.Drawing;
 using System.Windows.Forms;
+using System.Linq;
 
 namespace Slide08
 {
 	public class Program
 	{
 
-        static TextBox textBox;
-
-        static void ButtonPressed(object sender, EventArgs e)
-        {
-            textBox.Text = textBox.Text + (sender as Button).Text;
-        }
-
-		static void Main()
+		static void CreateReport(string monthName)
 		{
+			MessageBox.Show("Создаю отчет за " + monthName + "...");
+		}
 
-            var form = new Form();
-            textBox = new TextBox
-            {
-                Width = form.ClientSize.Width,
-                Height = 20
-            };
-            form.Controls.Add(textBox);
+		static void MenuItemSelected(object sender, EventArgs e)
+		{
+			var menuItem = sender as MenuItem;
+			CreateReport(menuItem.Text);
+		}
 
-            var symbols = new[,] { { "7", "4", "1", "*" }, { "8", "5", "2", "0" }, { "9", "6", "3", "#" } };
+		public static void Main()
+		{
+			var monthNames = new[] { "январь", "февраль", "март", "апрель", "май", "июнь", "июль", "август", "сентябрь", "октябрь", "ноябрь", " декабрь" };
+			var menuItems = monthNames
+				.Select(name =>
+				{
+					var menuItem = new MenuItem(name);
+					menuItem.Click += (sender, args) => CreateReport(name);
+					return menuItem;
+				})
+				.ToArray();
 
-            var size = new Size(form.ClientSize.Width / symbols.GetLength(0), (form.ClientSize.Height - textBox.Height) / symbols.GetLength(1));
+			//Но раньше, когда не было лямбда-выражений, приходилось писать так:
+			menuItems = new MenuItem[monthNames.Length];
+			for (int i = 0; i < menuItems.Length; i++)
+			{
+				var item = new MenuItem(monthNames[i]);
+				item.Click += MenuItemSelected;
+				menuItems[i] = item;
+			}
 
-            for(int x=0;x<symbols.GetLength(0);x++)
-                for (int y = 0; y < symbols.GetLength(1); y++)
-                {
-                    var button = new Button
-                    {
-                        Left = size.Width * x,
-                        Top = textBox.Height + size.Height * y,
-                        Size = size,
-                        Text = symbols[x, y]
-                    };
-                    var newX = x; // Замыкание!
-                    var newY = y;
-                    //button.Click += (s, a) => textBox.Text = textBox.Text + symbols[newX, newY]; //Но раньше лямбд не было...
-                    button.Click += ButtonPressed;
-                    form.Controls.Add(button);
-                }
-            Application.Run(form);
-
+			var mainMenu = new MainMenu(
+				new[]
+				{
+					new MenuItem("Создать отчет", menuItems)
+				});
+			var form = new Form();
+			form.Menu = mainMenu;
+			Application.Run(form);
 		}
 	}
 }

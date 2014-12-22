@@ -24,7 +24,7 @@ namespace Slide10
 
 
 
-		static void MainX()
+		static void Main()
 		{
 			bool Descending = true;
 			Func<string,string,int> cmp=
