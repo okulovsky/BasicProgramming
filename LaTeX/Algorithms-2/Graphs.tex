@@ -1,0 +1,161 @@
+\documentclass[24pt,pdf,hyperref={unicode},aspectratio=169]{beamer}
+\usepackage[utf8]{inputenc}
+\usepackage[russian]{babel}
+\usepackage{tikz}
+\begin{document}
+
+\tikzstyle{dedge} = [draw,thick,->]
+\tikzstyle{edge} = [draw,thick,-]
+\tikzstyle{ver} = [circle, draw=black]
+
+
+\begin{frame}\frametitle{Ориентированный граф (орграф)}
+\uncover<+->{$$
+G=(V,E)
+$$}
+\uncover<+->{$$
+E\subset V\times V
+$$}
+\uncover<+->{$$
+V=\{2,3,4,6,8\}
+$$}
+\uncover<+->{$$
+E=\{(4,2),(6,2),(6,3),(8,2),(8,4)\}=\{(a,b)\ :\ a\in V,\ b\in V,\ a\%b = 0\}
+$$}
+
+\uncover<+->{
+\begin{center}
+\begin{tikzpicture}[x=2cm,y=-2cm]
+\node[ver](n2) at (0,0) {2};
+\node[ver](n3) at (1,0) {3};
+\node[ver](n4) at (0,1) {4};
+\node[ver](n6) at (1,1) {6};
+\node[ver](n8) at (-1,1) {8};
+\path[dedge] (n4) -- (n2);
+\path[dedge] (n6) -- (n2);
+\path[dedge] (n6) -- (n3);
+\path[dedge] (n8) -- (n2);
+\path[dedge] (n8) -- (n4);
+
+
+\end{tikzpicture}
+\end{center}
+}
+\end{frame}
+
+\begin{frame}\frametitle{Неориентированный граф}
+
+\uncover<+->{$$
+G=(V,E)
+$$}
+\uncover<+->{$$
+E=\{\ \{a,b\}\ :\ a,b\in V \}
+$$}
+\uncover<+->{$$
+V=\{1,2,3,4,5\}
+$$}
+\uncover<+->{$$
+E=\{(1,3),(1,5), (3,5), (2,4) \}=\{(a,b)\ :\ a\in V,\ b\in V,\ (a+b)\% 2 = 0 \}
+$$}
+
+\uncover<+->{
+\begin{center}
+\begin{tikzpicture}[x=2cm,y=-2cm]
+\node[ver](n1) at (0,0) {1};
+\node[ver](n2) at (1,0) {2};
+\node[ver](n3) at (0,1) {3};
+\node[ver](n5) at (1,1) {5};
+\node[ver](n4) at (2,1) {4};
+\path[edge] (n2) -- (n4);
+\path[edge] (n1) -- (n3);
+\path[edge] (n3) -- (n5);
+\path[edge] (n1) -- (n5);
+
+\end{tikzpicture}
+\end{center}
+}
+
+\end{frame}
+
+\begin{frame}
+\includegraphics[width=\textwidth]{waypoints.png}
+\end{frame}
+
+\begin{frame}
+\includegraphics[height=\textheight]{tictactoe.jpg}
+\end{frame}
+
+\begin{frame}
+\includegraphics[height=\textheight]{socnetwork.png}
+\end{frame}
+
+\begin{frame}
+
+\uncover<+->{
+Ребро $e$ {\bf инцидентно} вершине $v$, если $e=(v,w)$ или $e=(w,v)$ для некоторого $w$
+}\\[0.3cm]
+
+\uncover<+->{
+Вершины $v$ и $w$ {\bf индицентны}, если $(v,w)\in E$.
+}\\[0.3cm]
+
+\uncover<+->{
+{\bf Степенью вершины} в неориентированном графе называют количество инцидентных ей ребер. Для ориентированных графов разделяют степень захода и степень исхода.
+}\\[0.3cm]
+
+\uncover<+->{
+{\bf Путь (маршрут)} -- это последовательность $v_1,e_1,v_2,e_2,\ldots,v_n$, где $e_i=(v_i,v_j)$, $e_i\in E$, $v_i\in V$.
+}\\[0.3cm]
+
+\uncover<+->{
+{\bf Простой путь} -- это путь, в котором все ребра и вершины различны.
+}\\[0.3cm]
+
+\uncover<+->{
+{\bf Цикл (контур)} -- это путь, в котором первая и последняя вершина совпадают, но других совпадений нет.
+}\\[0.3cm]
+
+\uncover<+->{
+Неориентированный граф {\bf связен}, если между любыми двумя его вершинами существует путь. Для орграфов такое условие называют {\bf сильной связностью}. {\bf Слабая связность} орграфа означает связность соответствующего ему неориентированного графа.
+}
+\end{frame}
+
+\begin{frame}
+\uncover<+->{
+{\bf Дерево} -- это связный неориентированный граф, не содержащий циклов.
+}\\[0.5cm]
+
+
+\uncover<+->{
+\begin{center}
+\begin{tikzpicture}[x=1cm, y=-1cm]
+\node[ver] (n1) at (0,0) {};
+\node[ver] (n2) at (-1,1){};
+\node[ver] (n3) at (1,1){};
+\node[ver] (n4) at (0,1){};
+\node[ver] (n5) at (0,2){};
+\node[ver] (n6) at (2,2){};
+\path[edge] (n1) -- (n2);
+\path[edge] (n1) -- (n3);
+\path[edge] (n1) -- (n4);
+\path[edge] (n3) -- (n5);
+\path[edge] (n3) -- (n6);
+\end{tikzpicture}
+\end{center}
+}
+
+\uncover<+->{
+{\bf Лист} -- это вершина дерева, имеющая степень 1.
+}\\[0.5cm]
+
+\uncover<+->{
+{\bf Корень} -- это произвольно выбранная и зафиксированная вершина дерева.
+}\\[0.5cm]
+
+\uncover<+->{
+Несвязный неориентированный ациклический граф иногда называют {\bf лесом}.
+}
+
+\end{frame}
+
+\end{document}
