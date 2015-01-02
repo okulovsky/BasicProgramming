@@ -22,17 +22,17 @@ namespace Slide02
 
         static string[] labyrinth = new string[]
         {
-            " X  X     ",
-            " X XX XXXX",
-            "    X     ",
-            " XXXXX X X",
-            " X   X X X",
-            "   X   X  ",
-        };
+            " X   X    ",
+            " X XXXXX X",
+            "      X   ",
+            "XXXX XXX X",
+            "         X",
+            " XXX XXXXX",
+            " X        ",
+          };
 
         static void Print(State[,] map)
         {
-            return;
             Console.CursorLeft = 0;
             Console.CursorTop = 0;
             for (int x = 0; x < map.GetLength(0) + 2; x++)
@@ -63,8 +63,6 @@ namespace Slide02
                 for (int y = 0; y < map.GetLength(1); y++)
                     map[x, y] = labyrinth[y][x] == ' ' ? State.Empty : State.Wall;
 
-            map = new State[1000, 1000];
-
             var stack = new Stack<Point>();
             stack.Push(new Point { X = 0, Y = 0 });
             while (stack.Count != 0)
@@ -75,10 +73,10 @@ namespace Slide02
                 map[point.X, point.Y] = State.Visited;
                 Print(map);
 
-                stack.Push(new Point { X = point.X, Y = point.Y - 1 });
-                stack.Push(new Point { X = point.X, Y = point.Y + 1 });
-                stack.Push(new Point { X = point.X - 1, Y = point.Y });
-                stack.Push(new Point { X = point.X + 1, Y = point.Y });
+                for (var dy = -1; dy <= 1; dy++)
+                    for (var dx = -1; dx <= 1; dx++)
+                        if (dx != 0 && dy != 0) continue;
+                        else stack.Push(new Point { X = point.X + dx, Y = point.Y + dy });
                 
             }
         }

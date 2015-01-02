@@ -1,7 +1,8 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 
-namespace Slide01
+namespace Slide03
 {
     enum State
     {
@@ -10,6 +11,12 @@ namespace Slide01
         Visited
     };
 
+    class Point
+    {
+        public int X { get; set; }
+        public int Y { get; set; }
+
+    }
     public class Program
     {
 
@@ -21,22 +28,21 @@ namespace Slide01
             "XXXX XXX X",
             "         X",
             " XXX XXXXX",
-            " X        ",
-       };
+            " X        "
+        };
 
         static void Print(State[,] map)
         {
-
             Console.CursorLeft = 0;
             Console.CursorTop = 0;
-            for (int x = 0; x < map.GetLength(0)+2; x++)
+            for (int x = 0; x < map.GetLength(0) + 2; x++)
                 Console.Write("X");
             Console.WriteLine();
             for (int y = 0; y < map.GetLength(1); y++)
             {
                 Console.Write("X");
                 for (int x = 0; x < map.GetLength(0); x++)
-                    switch (map[x,y])
+                    switch (map[x, y])
                     {
                         case State.Wall: Console.Write("X"); break;
                         case State.Empty: Console.Write(" "); break;
@@ -49,30 +55,31 @@ namespace Slide01
             Console.ReadKey();
         }
 
-
-        static void Visit(State[,] map, int x, int y)
-        {
-            if (x<0 || x>=map.GetLength(0)|| y<0 || y>=map.GetLength(1)) return;
-            if (map[x,y] != State.Empty) return;
-            map[x,y]= State.Visited;
-            Print(map);
-
-            for (var dy = -1; dy <= 1; dy++)
-                for (var dx = -1; dx <= 1; dx++)
-                    if (dx != 0 && dy != 0) continue;
-                    else Visit(map, x + dx, y + dy);
-        }
-
         static void MainX()
         {
-            var map = new State[labyrinth[0].Length,labyrinth.Length];
-            
+            var map = new State[labyrinth[0].Length, labyrinth.Length];
+
             for (int x = 0; x < map.GetLength(0); x++)
                 for (int y = 0; y < map.GetLength(1); y++)
                     map[x, y] = labyrinth[y][x] == ' ' ? State.Empty : State.Wall;
 
-            Print(map);
-            Visit(map, 0, 0);
+
+            var queue = new Queue<Point>();
+            queue.Enqueue(new Point { X = 0, Y = 0 });
+            while (queue.Count != 0)
+            {
+                var point = queue.Dequeue();
+                if (point.X < 0 || point.X >= map.GetLength(0) || point.Y < 0 || point.Y >= map.GetLength(1)) continue;
+                if (map[point.X, point.Y] != State.Empty) continue;
+                map[point.X, point.Y] = State.Visited;
+                Print(map);
+
+                for (var dy = -1; dy <= 1; dy++)
+                    for (var dx = -1; dx <= 1; dx++)
+                        if (dx != 0 && dy != 0) continue;
+                        else queue.Enqueue(new Point { X = point.X + dx, Y = point.Y + dy });
+
+            }
         }
     }
 }
