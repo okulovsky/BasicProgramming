@@ -1,0 +1,49 @@
+﻿using System;
+using System.Collections.Generic;
+
+namespace Slide05
+{
+    public class Node
+    {
+        private readonly List<Node> incidentNodes = new List<Node>();
+        public IEnumerable<Node> IncidentNodes
+        {
+            get
+            {
+                foreach (var node in incidentNodes)
+                    yield return node;
+            }
+        }
+        public void Connect(Node node) 
+        {
+            incidentNodes.Add(node);
+            node.incidentNodes.Add(this);
+        }
+    }
+
+    public class Graph : IEnumerable<Node>
+    {
+        private Node[] nodes;
+        public Graph(int nodesCount)
+        {
+            nodes = new Node[nodesCount];
+        }
+
+        public int Length { get { return nodes.Length; } }
+
+        public Node this[int index] { get { return nodes[index]; } }
+
+
+        public IEnumerator<Node> GetEnumerator()
+        {
+            foreach (var node in nodes) yield return node;
+        }
+
+        System.Collections.IEnumerator System.Collections.IEnumerable.GetEnumerator()
+        {
+            return GetEnumerator();
+        }
+    }
+
+    //Тут можно приконнектить к графу ноду, которая вне его
+}

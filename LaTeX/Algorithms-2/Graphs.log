@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2014.4.2)  2 JAN 2015 19:28
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2014.4.2)  3 JAN 2015 10:52
 entering extended mode
 **Graphs.tex
 (C:\Users\yura\Desktop\BasicProgramming\LaTeX\Algorithms-2\Graphs.tex
@@ -1387,7 +1387,7 @@ LaTeX Font Warning: Font shape `T2A/cmss/m/n' in size <4> not available
 ] [10
 
 ]
-<waypoints.png, id=274, 803.0pt x 446.66875pt>
+<waypoints.png, id=272, 803.0pt x 446.66875pt>
 File: waypoints.png Graphic file (type png)
  <use waypoints.png>
 Package pdftex.def Info: waypoints.png used on input line 82.
@@ -1396,7 +1396,7 @@ Package pdftex.def Info: waypoints.png used on input line 82.
 
  <C:/Users/yura/Desktop/BasicProgramming/LaTeX/Algorithms-2/waypoints.png (PNG 
 copy)>]
-<tictactoe.jpg, id=300, 803.0pt x 538.01pt>
+<tictactoe.jpg, id=298, 803.0pt x 538.01pt>
 File: tictactoe.jpg Graphic file (type jpg)
  <use tictactoe.jpg>
 Package pdftex.def Info: tictactoe.jpg used on input line 86.
@@ -1408,7 +1408,7 @@ Overfull \vbox (1.0pt too high) detected at line 86
 [12
 
  <C:/Users/yura/Desktop/BasicProgramming/LaTeX/Algorithms-2/tictactoe.jpg>]
-<socnetwork.png, id=326, 1270.7475pt x 875.27pt>
+<socnetwork.png, id=324, 1270.7475pt x 875.27pt>
 File: socnetwork.png Graphic file (type png)
  <use socnetwork.png>
 Package pdftex.def Info: socnetwork.png used on input line 90.
@@ -1445,15 +1445,17 @@ Overfull \vbox (1.0pt too high) detected at line 90
 ] [25
 
 ]
+[26
+
+]
 \tf@nav=\write6
 \tf@toc=\write7
 \tf@snm=\write8
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 161.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 161.
-
-(C:\Users\yura\Desktop\BasicProgramming\LaTeX\Algorithms-2\Graphs.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 161.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 161.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 179.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 179.
+ (C:\Users\yura\Desktop\BasicProgramming\LaTeX\Algorithms-2\Graphs.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 179.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 179.
 Package rerunfilecheck Info: File `Graphs.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
 
@@ -1461,27 +1463,28 @@ Package rerunfilecheck Info: File `Graphs.out' has not changed.
 LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 1.0pt have occurred.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 161.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 179.
  ) 
 Here is how much of TeX's memory you used:
- 23546 strings out of 493921
- 424781 string characters out of 3155707
- 478452 words of memory out of 3000000
- 26305 multiletter control sequences out of 15000+200000
- 13911 words of font info for 41 fonts, out of 3000000 for 9000
+ 23560 strings out of 493921
+ 424988 string characters out of 3155707
+ 478501 words of memory out of 3000000
+ 26316 multiletter control sequences out of 15000+200000
+ 14735 words of font info for 42 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
- 56i,14n,59p,466b,666s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 56i,14n,59p,466b,674s stack positions out of 5000i,500n,10000p,200000b,50000s
  <C:\Users\yura\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\lh\lh-t2a\dpi600\las
-x1095.pk> <C:\Users\yura\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\lh\lh-t2a\dpi
-600\lass1095.pk> <C:\Users\yura\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\lh\lh-
-t2a\dpi600\lass1440.pk><C:/tex/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/te
-x/fonts/type1/public/amsfonts/cm/cmss10.pfb><C:/tex/fonts/type1/public/amsfonts
-/cm/cmss8.pfb><C:/tex/fonts/type1/public/amsfonts/cm/cmssi10.pfb><C:/tex/fonts/
-type1/public/amsfonts/cm/cmssi8.pfb><C:/tex/fonts/type1/public/amsfonts/cm/cmsy
-10.pfb>
-Output written on Graphs.pdf (25 pages, 1193488 bytes).
+s1200.pk> <C:\Users\yura\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\lh\lh-t2a\dpi
+600\lasx1095.pk> <C:\Users\yura\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\lh\lh-
+t2a\dpi600\lass1095.pk> <C:\Users\yura\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour
+\lh\lh-t2a\dpi600\lass1440.pk><C:/tex/fonts/type1/public/amsfonts/cm/cmmi10.pfb
+><C:/tex/fonts/type1/public/amsfonts/cm/cmss10.pfb><C:/tex/fonts/type1/public/a
+msfonts/cm/cmss8.pfb><C:/tex/fonts/type1/public/amsfonts/cm/cmssi10.pfb><C:/tex
+/fonts/type1/public/amsfonts/cm/cmssi8.pfb><C:/tex/fonts/type1/public/amsfonts/
+cm/cmsy10.pfb>
+Output written on Graphs.pdf (26 pages, 1200742 bytes).
 PDF statistics:
- 789 PDF objects out of 1000 (max. 8388607)
- 51 named destinations out of 1000 (max. 500000)
+ 823 PDF objects out of 1000 (max. 8388607)
+ 53 named destinations out of 1000 (max. 500000)
  58 words of extra memory for PDF output out of 10000 (max. 10000000)
 
