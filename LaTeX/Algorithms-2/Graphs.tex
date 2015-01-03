@@ -162,14 +162,18 @@ $$}
 \begin{large}
 \begin{center}
 \begin{tikzpicture}[x=2cm, y=-2cm]
-\node (n1) at (0,0)  {1};
-\node (n2) at (-1,1)  {2};
-\node (n3) at (1,1)  {3};
-\node (n4) at (-1,2){4};
-\node (n5) at (1,2) {5};
+\node[ver] (n1) at (0,0)  {0};
+\node[ver] (n2) at (-1,1)  {1};
+\node[ver] (n3) at (1,1)  {2};
+\node[ver] (n4) at (-1,2){3};
+\node[ver] (n5) at (1,2) {4};
 
-\path[dedge] (n1)--(n2);
-\path[dedge] (n1)--(n2);
+\path[edge] (n1)--(n2);
+\path[edge] (n1)--(n3);
+\path[edge] (n2)--(n4);
+\path[edge] (n2)--(n5);
+\path[edge] (n3)--(n4);
+\path[edge] (n3)--(n5);
 
 \end{tikzpicture}
 \end{center}

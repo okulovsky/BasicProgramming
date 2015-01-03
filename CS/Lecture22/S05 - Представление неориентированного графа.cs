@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace Slide05
 {
@@ -26,7 +27,7 @@ namespace Slide05
         private Node[] nodes;
         public Graph(int nodesCount)
         {
-            nodes = new Node[nodesCount];
+            nodes = Enumerable.Range(0, nodesCount).Select(z => new Node()).ToArray();
         }
 
         public int Length { get { return nodes.Length; } }

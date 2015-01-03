@@ -60,7 +60,7 @@ namespace Slide07
         private Node<TNodeData, TEdgeData>[] nodes;
         public Graph(int nodesCount)
         {
-            nodes = new Node<TNodeData, TEdgeData>[nodesCount];
+            nodes = Enumerable.Range(0, nodesCount).Select(z => new Node<TNodeData,TEdgeData>()).ToArray();
         }
 
         public int Length { get { return nodes.Length; } }

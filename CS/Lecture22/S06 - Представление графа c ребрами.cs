@@ -57,7 +57,7 @@ namespace Slide06
         private Node[] nodes;
         public Graph(int nodesCount)
         {
-            nodes = new Node[nodesCount];
+            nodes = Enumerable.Range(0, nodesCount).Select(z => new Node()).ToArray();
         }
 
         public int Length { get { return nodes.Length; } }
