@@ -6,31 +6,38 @@ namespace Slide07
 {
     public class Edge<TNodeData, TEdgeData>
     {
-        public readonly Node<TNodeData,TEdgeData> First;
-        public readonly Node<TNodeData,TEdgeData> Second;
+        public readonly Node<TNodeData,TEdgeData> From;
+        public readonly Node<TNodeData,TEdgeData> To;
 
         TEdgeData Data { get; set; }
 
         public Edge(Node<TNodeData,TEdgeData> first, Node<TNodeData,TEdgeData> second)
         {
-            this.First = first;
-            this.Second = second;
+            this.From = first;
+            this.To = second;
         }
         public bool IsIncident(Node<TNodeData,TEdgeData> node)
         {
-            return First == node || Second == node;
+            return From == node || To == node;
         }
         public Node<TNodeData,TEdgeData> OtherNode(Node<TNodeData,TEdgeData> node)
         {
             if (!IsIncident(node)) throw new ArgumentException();
-            if (First == node) return Second;
-            return First;
+            if (From == node) return To;
+            return From;
         }
     }
 
     public class Node<TNodeData, TEdgeData>
     {
         readonly List<Edge<TNodeData, TEdgeData>> edges = new List<Edge<TNodeData, TEdgeData>>();
+        public readonly int NodeNumber;
+
+        public Node(int number)
+        {
+            NodeNumber = number;
+        }
+
         public IEnumerable<Node<TNodeData, TEdgeData>> IncidentNodes
         {
             get
@@ -47,7 +54,7 @@ namespace Slide07
         }
         public static Edge<TNodeData, TEdgeData> Connect(Node<TNodeData, TEdgeData> node1, Node<TNodeData, TEdgeData> node2, Graph<TNodeData, TEdgeData> graph)
         {
-            if (!graph.Contains(node1) || !graph.Contains(node2)) throw new ArgumentException();
+            if (!graph.Nodes.Contains(node1) || !graph.Nodes.Contains(node2)) throw new ArgumentException();
             var edge = new Edge<TNodeData, TEdgeData>(node1, node2);
             node1.edges.Add(edge);
             node2.edges.Add(edge);
@@ -55,26 +62,25 @@ namespace Slide07
         }
     }
 
-    public class Graph<TNodeData, TEdgeData> : IEnumerable<Node<TNodeData, TEdgeData>>
+    public class Graph<TNodeData, TEdgeData> 
     {
         private Node<TNodeData, TEdgeData>[] nodes;
         public Graph(int nodesCount)
         {
-            nodes = Enumerable.Range(0, nodesCount).Select(z => new Node<TNodeData,TEdgeData>()).ToArray();
+            nodes = Enumerable.Range(0, nodesCount).Select(z => new Node<TNodeData,TEdgeData>(z)).ToArray();
         }
 
         public int Length { get { return nodes.Length; } }
 
         public Node<TNodeData, TEdgeData> this[int index] { get { return nodes[index]; } }
 
-        public IEnumerator<Node<TNodeData, TEdgeData>> GetEnumerator()
-        {
-            foreach (var node in nodes) yield return node;
-        }
 
-        System.Collections.IEnumerator System.Collections.IEnumerable.GetEnumerator()
+        public IEnumerable<Node<TNodeData, TEdgeData>> Nodes
         {
-            return GetEnumerator();
+            get
+            {
+                foreach (var node in nodes) yield return node;
+            }
         }
 
         public void Connect(int index1, int index2)

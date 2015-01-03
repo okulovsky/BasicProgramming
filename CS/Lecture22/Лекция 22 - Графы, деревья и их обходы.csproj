@@ -40,8 +40,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="S10 - Топологическая сортировка.cs" />
     <Compile Include="S09 - Поиск в ширину и в глубину.cs" />
-    <Compile Include="S08 - Хранимые данные в словаре.cs" />
+    <Compile Include="S08 - Отдельно хранимые данные.cs" />
     <Compile Include="S07 - Представление графа c хранимыми данными.cs" />
     <Compile Include="S06 - Представление графа c ребрами.cs" />
     <Compile Include="S055 - Представление неориентированного графа - 1.cs" />

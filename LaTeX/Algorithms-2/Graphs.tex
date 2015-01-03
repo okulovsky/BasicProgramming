@@ -159,7 +159,7 @@ $$}
 \end{frame}
 
 \begin{frame}
-\begin{large}
+
 \begin{center}
 \begin{tikzpicture}[x=2cm, y=-2cm]
 \node[ver] (n1) at (0,0)  {0};
@@ -177,7 +177,58 @@ $$}
 
 \end{tikzpicture}
 \end{center}
-\end{large}
+
+\end{frame}
+
+
+\begin{frame}
+
+\begin{columns}
+\column{0.5\textwidth}
+\begin{center}
+\begin{tikzpicture}[x=2cm,y=-2cm]
+
+\node[ver] (n0) at (0,0) {0};
+\node[ver] (n1) at (1,1) {1};
+\node[ver] (n2) at (-1,1.5) {2};
+\node[ver] (n3) at (1,2) {3};
+\node[ver] (n4) at (0,3) {4};
+
+\path[dedge] (n0) -- (n1);
+\path[dedge] (n0) -- (n2);
+\path[dedge] (n1) -- (n2);
+\path[dedge] (n1) -- (n3);
+\path[dedge] (n2) -- (n3);
+\path[dedge] (n2) -- (n4);
+\path[dedge] (n3) -- (n4);
+
+
+\end{tikzpicture}
+\end{center}
+\column{0.5\textwidth}
+
+\begin{center}
+\begin{tikzpicture}[x=2cm,y=-2cm]
+
+\node[ver] (n0) at (0,0) {0};
+\node[ver] (n1) at (0,1) {1};
+\node[ver] (n2) at (1,2) {2};
+\node[ver] (n3) at (-1,2) {3};
+\node[ver] (n4) at (0,3) {4};
+
+\path[dedge] (n0) -- (n1);
+\path[dedge] (n1) -- (n2);
+\path[dedge] (n2) -- (n3);
+\path[dedge] (n3) -- (n1);
+\path[dedge] (n2) -- (n4);
+\path[dedge] (n3) -- (n4);
+
+\end{tikzpicture}
+\end{center}
+
+
+\end{columns}
+
 \end{frame}
 
 \end{document}

@@ -6,7 +6,14 @@ namespace Slide05
 {
     public class Node
     {
-        private readonly List<Node> incidentNodes = new List<Node>();
+        private readonly List<Node> incidentNodes = new List<Node>(); 
+        public readonly int NodeNumber;
+
+        public Node(int number)
+        {
+            NodeNumber = number;
+        }
+
         public IEnumerable<Node> IncidentNodes
         {
             get
@@ -15,6 +22,7 @@ namespace Slide05
                     yield return node;
             }
         }
+
         public void Connect(Node node) 
         {
             incidentNodes.Add(node);
@@ -22,27 +30,24 @@ namespace Slide05
         }
     }
 
-    public class Graph : IEnumerable<Node>
+    public class Graph 
     {
         private Node[] nodes;
         public Graph(int nodesCount)
         {
-            nodes = Enumerable.Range(0, nodesCount).Select(z => new Node()).ToArray();
+            nodes = Enumerable.Range(0, nodesCount).Select(z => new Node(z)).ToArray();
         }
 
         public int Length { get { return nodes.Length; } }
 
         public Node this[int index] { get { return nodes[index]; } }
 
-
-        public IEnumerator<Node> GetEnumerator()
+        public IEnumerable<Node> Nodes
         {
-            foreach (var node in nodes) yield return node;
-        }
-
-        System.Collections.IEnumerator System.Collections.IEnumerable.GetEnumerator()
-        {
-            return GetEnumerator();
+            get
+            {
+                foreach (var node in nodes) yield return node;
+            }
         }
     }
 

@@ -12,9 +12,12 @@ namespace Slide08
     {
         public static void MainX()
         {
-            Dictionary<Node, string> captions = new Dictionary<Node, string>();
             var graph = new Graph(10);
-            captions[graph[0]] = "0";
+            var captions = new string[graph.Length];
+            captions[0] = "A";
+
+            var captions1 = new Dictionary<Node, string>();
+            captions1[graph[0]] = "A";
         }
     }
 }
