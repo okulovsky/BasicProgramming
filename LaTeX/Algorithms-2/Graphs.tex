@@ -300,5 +300,43 @@ $$}
 
 \end{frame}
 
+\begin{frame}
+
+\begin{center}
+\begin{tikzpicture}[x=2cm,y=-2cm]
+
+\only<1>{\node[ver] (n0) at (0,0) {0};}
+\only<2->{\node[verg] (n0) at (0,0) {0};}
+
+
+\only<1-2>{\node[ver] (n1) at (0,1) {1};}
+\only<3-7>{\node[verg] (n1) at (0,1) {1};}
+\only<8->{\node[circle,fill=red,text=white] (n1) at (0,1) {1};}
+
+
+\only<1-3>{\node[ver] (n2) at (1,2) {2};}
+\only<4->{\node[verg] (n2) at (1,2) {2};}
+
+
+\only<1-6>{\node[ver] (n3) at (-1,2) {3};}
+\only<7->{\node[verg] (n3) at (-1,2) {3};}
+
+
+\only<1-4>{\node[ver] (n4) at (0,3) {4};}
+\only<5>{\node[verg] (n4) at (0,3) {4};}
+\only<6->{\node[verb] (n4) at (0,3) {4};}
+
+\path[dedge] (n0) -- (n1);
+\path[dedge] (n1) -- (n2);
+\path[dedge] (n2) -- (n3);
+\path[dedge] (n3) -- (n1);
+\path[dedge] (n2) -- (n4);
+\path[dedge] (n3) -- (n4);
+
+\end{tikzpicture}
+\end{center}
+
+\end{frame}
+
 
 \end{document}
