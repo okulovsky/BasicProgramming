@@ -40,6 +40,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="S093 - Игра в восемь.cs" />
     <Compile Include="S092 - Поиск кратчайшего пути.cs" />
     <Compile Include="S091 - Поиск компонент связности.cs" />
     <Compile Include="S10 - Топологическая сортировка.cs" />

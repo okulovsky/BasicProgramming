@@ -5,7 +5,7 @@ using System.Linq;
 using Slide06;
 using Slide09;
 
-namespace Slide91
+namespace Slide93
 {
     
 
@@ -40,7 +40,7 @@ namespace Slide91
         }
 
 
-        public static void Main()
+        public static void MainX()
         {
             var graph = Graph.MakeGraph(
                 0,1,
