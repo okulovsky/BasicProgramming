@@ -62,7 +62,7 @@ $$}
 V=\{1,2,3,4,5\}
 $$}
 \uncover<+->{$$
-E=\{(1,3),(1,5), (3,5), (2,4) \}=\{(a,b)\ :\ a\in V,\ b\in V,\ (a+b)\% 2 = 0 \}
+E=\{\{1,3\},\{1,5\}, \{3,5\}, \{2,4\} \}=\{\{a,b\}\ :\ a\in V,\ b\in V,\ (a+b)\% 2 = 0 \}
 $$}
 
 \uncover<+->{
@@ -212,7 +212,30 @@ $$}
 \end{center}
 \end{frame}
 
+\begin{frame}
+\only<1>{$$
+\begin{array}{c c c}
+1 & 2 & 3 \\
+4 & 5 & 6 \\
+7 & 8 &   \\
+\end{array}
+$$}
+\only<2>{$$
+\begin{array}{c c c}
+1 & 2 & 3 \\
+4 & 5 &  \\
+7 & 8 & 6  \\
+\end{array}
+$$}
+\only<3>{$$
+\begin{array}{c c c}
+1 & 2 & 3 \\
+4 &   & 5 \\
+7 & 8 & 6  \\
+\end{array}
+$$}
 
+\end{frame}
 
 \section{Поиск кратчайшего пути}
 
@@ -230,8 +253,6 @@ $$}
 \path[edge] (n1) -- (n4);
 \path[edge] (n2) -- (n3);
 \path[edge] (n3) -- (n4);
-
-
 
 \end{tikzpicture}
 \end{center}

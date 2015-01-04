@@ -69,14 +69,14 @@ namespace Slide91
         public override int GetHashCode()
         {
             return GamePoints
-                .Select(point => (point.X * Size + point.Y) * 7 * Data[point.X, point.Y])
-                .Sum();
+                .Select(point => Data[point.X,point.Y])
+                .Aggregate((sum,val)=>sum*97+val);
         }
 
         public void Print()
         {
             var str = GamePoints
-                .GroupBy(z => z.Y)
+                .GroupBy(z => z.X)
                 .Select(row => row.Select(point => Data[point.X, point.Y].ToString()).Aggregate((a, b) => a + " " + b))
                 .Aggregate((a, b) => a + "\n" + b);
             Console.WriteLine(str);
@@ -89,29 +89,37 @@ namespace Slide91
         public static void Main()
         {
             var start = new Game(new[,] {
-                { 1, 2, 3 }, 
-                { 0, 7, 6 },
-                { 4, 5, 8 }});
+                {4, 1, 3},
+                {7, 2, 6},
+                {5, 0, 8}});
 
             var target = new Game(new[,]{
                 {1, 2, 3},
                 {4, 5, 6},
                 {7, 8, 0}});
 
-            var visited = new HashSet<Game>();
+            Dictionary<Game, Game> path = new Dictionary<Game, Game>();
+            path[start] = null;
             var queue = new Queue<Game>();
             queue.Enqueue(start);
             while (queue.Count != 0)
             {
                 var game = queue.Dequeue();
-                if (visited.Contains(game)) 
-                    continue;
-                visited.Add(game);
-               // game.Print();
-                if (game.Equals(target)) break;
-                foreach (var nextGame in game.AllAdjacentGames().Where(g=>!visited.Contains(g)))
-                    queue.Enqueue(nextGame);
-    
+                
+                var nextGames = game
+                    .AllAdjacentGames()
+                    .Where(g => !path.ContainsKey(g));
+                foreach (var nextGame in nextGames)
+                {
+                    path[nextGame] = game;
+                    queue.Enqueue(nextGame);             
+                }
+                if (path.ContainsKey(target)) break;
+            }
+            while (target != null)
+            {
+                target.Print();
+                target = path[target];
             }
         }
 
