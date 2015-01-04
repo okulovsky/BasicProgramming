@@ -3,3 +3,7 @@ obj
 *.suo
 *.userprefs
 TestResults/
+LaTeX/Algorithms-2/Graphs.aux
+LaTeX/Algorithms-2/Graphs.log
+LaTeX/Algorithms-2/Graphs.nav
+LaTeX/Algorithms-2/Graphs.synctex.gz
