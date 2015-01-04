@@ -103,7 +103,7 @@ namespace Slide10
                                     .Aggregate((a, b) => a + " " + b));
         }
 
-        public static void Main()
+        public static void MainX()
         {
             PrintResult(KahnAlgorithm(MakeSortableGraph()));
             PrintResult(KahnAlgorithm(MakeNonSortableGraph()));

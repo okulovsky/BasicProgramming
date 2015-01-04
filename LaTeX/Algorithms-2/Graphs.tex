@@ -2,7 +2,7 @@
 \usepackage[utf8]{inputenc}
 \usepackage[russian]{babel}
 \usepackage{tikz}
-\begin{document}
+
 
 \tikzstyle{dedge} = [draw,thick,->]
 \tikzstyle{edge} = [draw,thick,-]
@@ -10,6 +10,10 @@
 \tikzstyle{verg} = [circle, draw=black, fill=gray]
 \tikzstyle{verb} = [circle, draw=black, fill=black, text=white]
 
+
+\begin{document}
+
+\section{Графы}
 
 
 \begin{frame}\frametitle{Ориентированный граф (орграф)}
@@ -92,6 +96,9 @@ $$}
 \includegraphics[height=\textheight]{socnetwork.png}
 \end{frame}
 
+
+\section{Дополнительные определения}
+
 \begin{frame}
 
 \uncover<+->{
@@ -161,8 +168,9 @@ $$}
 
 \end{frame}
 
-\begin{frame}
+\section{Поиск в графе}
 
+\begin{frame}
 \begin{center}
 \begin{tikzpicture}[x=2cm, y=-2cm]
 \node[ver] (n1) at (0,0)  {0};
@@ -180,9 +188,56 @@ $$}
 
 \end{tikzpicture}
 \end{center}
-
 \end{frame}
 
+\section{Поиск компонент связности}
+
+\begin{frame}
+\begin{center}
+\begin{tikzpicture}[x=2cm,y=-2cm]
+\node[ver] (n0) at (-1,0.5) {0};
+\node[ver] (n1) at (0,0) {1};
+\node[ver] (n2) at (0,1) {2};
+\node[ver] (n3) at (1.5,0) {3};
+\node[ver] (n4) at (1,1) {4};
+\node[ver] (n5) at (2,1) {5};
+
+\path[edge] (n1) -- (n2);
+\path[edge] (n3) -- (n4);
+\path[edge] (n4) -- (n5);
+\path[edge] (n5) -- (n3);
+
+
+\end{tikzpicture}
+\end{center}
+\end{frame}
+
+
+
+\section{Поиск кратчайшего пути}
+
+\begin{frame}
+\begin{center}
+\begin{tikzpicture}[x=2cm,y=-2cm]
+\node[ver] (n0) at (0,0) {0};
+\node[ver] (n1) at (1.5,-1) {1};
+\node[ver] (n2) at (1,1) {2};
+\node[ver] (n3) at (2,1) {3};
+\node[ver] (n4) at (3,0) {4};
+
+\path[edge] (n0) -- (n1);
+\path[edge] (n0) -- (n2);
+\path[edge] (n1) -- (n4);
+\path[edge] (n2) -- (n3);
+\path[edge] (n3) -- (n4);
+
+
+
+\end{tikzpicture}
+\end{center}
+\end{frame}
+
+\section{Алгоритм Кана}
 
 \begin{frame}
 
@@ -255,6 +310,7 @@ $$}
 
 \end{frame}
 
+\section{Алгоритм Тарьяна}
 
 \begin{frame}
 
@@ -335,6 +391,20 @@ $$}
 
 \end{tikzpicture}
 \end{center}
+\end{frame}
+
+\begin{frame}
+\uncover<+->{{\bf Лемма 2. Если в орграфе нет циклов, то в нем есть вершина с нулевой степенью захода.}}\\[0.3cm]
+\uncover<+->{{\bf Лемма 4. Если в орграфе нет циклов, то в нем есть вершина с нулевой степенью исхода.}}\\[0.3cm]
+\uncover<+->{{\bf Лемма 5. Если $u$ -- вершина с нулевой степенью исхода, а $v_1,\ldots,v_n$ -- топологическая сортировка $G\setminus\{u\}$, то $v_1,\ldots,v_n$ -- топологическая сортировка $G$.
+}}\\[0.3cm]
+\uncover<+->{{\bf Лемма 6. Если в орграфе нет циклов, то алгоритм Тарьяна найдет топологическую сортировку.}}
+\end{frame}
+
+\begin{frame}
+\uncover<+->{{\bf Лемма 7. Если в орграфе есть циклы, то алгоритм Тарьяна выдаст ошибку.}}
+
+Пусть $v_1,\ldots,v_n$ -- цикл. Тогда, начав поиск в глубину из одной из вершин $v_i$, алгоритм отметит эту вершину серым цветом. Затем, пройдя по вершинам $v_{i+1},v+{i+2},\ldots, v_{i-1}$, он вернется в вершину $v_i$, которая все еще отмечена серым цветом, и выдаст ошибку. 
 
 \end{frame}
 
