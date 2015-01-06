@@ -1,0 +1,139 @@
+\documentclass[24pt,pdf,hyperref={unicode},aspectratio=169]{beamer}
+\usepackage[utf8]{inputenc}
+\usepackage[russian]{babel}
+\usepackage{tikz}
+
+\usetikzlibrary{calc}
+
+\tikzstyle{dedge} = [draw,thick,->]
+\tikzstyle{edge} = [draw,thick,-]
+\tikzstyle{ver} = [circle, draw=black]
+\tikzstyle{verg} = [circle, draw=black, fill=gray]
+\tikzstyle{verb} = [circle, draw=black, fill=black, text=white]
+
+\deftranslation[to=russian]{Lemma}{Лемма}
+
+
+\newcommand{\seg}[4]{
+\draw[draw=#4] (#1,#3) -- (#2,#3);
+\draw[draw=#4] ($(#1,#3)-(0,0.1)$) -- ($(#1,#3)+(0,0.1)$);
+\draw[draw=#4] ($(#2,#3)-(0,0.1)$) -- ($(#2,#3)+(0,0.1)$);
+}
+\newcommand{\segb}[3]{\seg{#1}{#2}{#3}{black}}
+
+\begin{document}
+
+\section{Комбинаторные задачи}
+
+\section{Жадный алгоритм}
+
+\section{Составление расписаний}
+
+\begin{frame}
+\begin{center}
+\begin{tikzpicture}
+\segb{1}{4}{0}
+\segb{5}{8}{0}
+\segb{9}{12}{0}
+
+\segb{3}{6}{-1}
+\segb{7}{10}{-1}
+
+\end{tikzpicture}
+\end{center}
+\end{frame}
+
+\begin{frame}
+\begin{center}
+\begin{tikzpicture}
+\segb{1}{11}{0}
+\segb{2}{4}{-1}
+\segb{5}{7}{-1}
+\segb{8}{10}{-1}
+\end{tikzpicture}
+\end{center}
+\end{frame}
+
+\begin{frame}
+\begin{center}
+\begin{tikzpicture}
+\segb{1}{5}{0}
+\segb{6}{10}{0}
+\segb{4}{7}{-1}
+
+\end{tikzpicture}
+\end{center}
+\end{frame}
+
+\begin{frame}
+\begin{center}
+\begin{tikzpicture}[x=0.7cm]
+\segb{1}{4}{0}
+\segb{5}{8}{0}
+\segb{9}{12}{0}
+\segb{13}{16}{0}
+
+\segb{7}{10}{-1}
+
+\segb{3}{6}{-1}
+\segb{3}{6}{-2}
+\segb{3}{6}{-3}
+
+\segb{11}{14}{-1}
+\segb{11}{14}{-2}
+\segb{11}{14}{-3}
+
+\end{tikzpicture}
+\end{center}
+\end{frame}
+
+\begin{frame}
+\uncover<+->{
+Доказательство корректности:
+
+Пусть $s(x_i)$ -- начало промежутка $x_i$, $e(x_i)$ -- окончание.
+
+Пусть $y_1,\ldots,y_n$ -- решение, найденное жадным алгоритмом, и $z_1,\ldots,z_m$ -- оптимальное решение.}
+
+\uncover<+->{\begin{lemma}
+Для любого $k$, $e(y_k)\le e(z_k)$.
+\end{lemma}}
+
+\uncover<+->{\begin{proof}
+База индукции: жадный алгоритм выбирает $y_1$ так, что $e(y_1)$ -- минимально.
+
+Шаг индукции: поскольку $e(y_{k-1})\le e(z_{k-1})$, то $z_k$ является допустимым для продолжения $y_1,\ldots,y_{k-1}$. $y_k$ -- элемент с минимальным $e$ из всех допустимых, следовательно, $e(y_k)\le e(z_k)$.
+\end{proof}}
+
+\uncover<+->{\begin{lemma}
+$n\ge m$.
+\end{lemma}}
+\uncover<+->{\begin{proof}
+Пусть $m>n$. Поскольку $e(y_n)<e(z_n)$, то $z_{n}$ допустим для $y_1,\ldots,y_n$. Но тогда жадный алгоритм включил бы его в эту последовательность.
+\end{proof}
+}
+\end{frame}
+
+\begin{frame}
+\begin{center}
+\begin{tikzpicture}[x=3cm, y=3cm]
+
+\node[ver] (n0) at (0,0) {};
+\node[ver] (n1) at (2,0) {};
+\node[ver] (n2) at (1,1) {};
+\node[ver] (n3) at (1,-1) {};
+
+\path [edge] (n0) -- node[above] {5} (n1);
+\path [edge] (n0) -- node[above] {1} (n2) -- node[above] {4} (n1);
+\path [edge] (n0) -- node[below] {2} (n3) -- node[below] {2} (n1);
+
+\end{tikzpicture}
+\end{center}
+\end{frame}
+
+\begin{frame}
+\begin{verbatim}
+\end{verbatim}
+\end{frame}
+
+\end{document}
