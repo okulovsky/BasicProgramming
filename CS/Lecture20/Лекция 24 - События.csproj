@@ -43,7 +43,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="S08 - Зачем нужен sender.cs" />
-    <Compile Include="S07 - События в окнах.cs" />
+    <Compile Include="S07 - События в окнах.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="S06 - Конвенция оформления событий.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="S00 - Событийная модель.cs" />
