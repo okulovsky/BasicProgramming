@@ -29,7 +29,23 @@
 
 \section{Комбинаторные задачи}
 
-\section{Жадный алгоритм}
+
+\begin{frame}\frametitle{Задача разбиения}
+
+Найти такое подмножество $B$ множества $A\subset \mathbb{N}$, что 
+
+$$
+\sum_{x\in B} x = \sum_{x\in A\setminus B} x
+$$
+
+\end{frame}
+
+\begin{frame}\frametitle{Задача коммивояжера}
+
+
+Найти такой цикл $C$ во взвешенном графе $G$, что каждая вершина $G$ входит в $C$ ровно один раз, и суммарный вес $C$ минимален из вовзможных.
+\end{frame}
+
 
 \section{Составление расписаний}
 
@@ -260,5 +276,74 @@ $$
 
 \end{frame}
 
+\begin{frame}
+
+$$
+A=\{2,5,1,6,10,4\}
+$$
+
+$$
+\begin{array}{c p{1cm} c}
+   && \uncover<7->{1} \\
+   && \uncover<6->{2} \\
+\uncover<5->{4} && \uncover<4->{5} \\
+\uncover<2->{10} && \uncover<3->{6} \\
+\end{array}
+$$
+\end{frame}
+
+\begin{frame}
+
+$$
+A=\{3,3,2,2,2\}
+$$
+
+$$
+\begin{array}{c p{1cm} c}
+   && \uncover<6->{2} \\
+\uncover<4->{2} && \uncover<5->{2} \\
+\uncover<2->{3} && \uncover<3->{3} \\
+\end{array}
+$$
+\end{frame}
+
+\begin{frame}
+
+\uncover<+->{$$
+P(B)=\min \left(\sum_{x\in B} x, \sum_{x\in A\setminus B} x \right)
+$$}
+
+\uncover<+->{$$
+OPT(A) = \min _{B\subset A} P(B)
+$$}
+
+\uncover<+->{Если $c$ -- цена решения, найденного жадным алгоритмом для разбиения множества $A$, то $c\le 4 OPT(A)/3$}
+
+\uncover<+->{$$
+d(B)=\left|\sum_{x\in B} - \sum_{x\in A\setminus B} x\right|
+$$}
+
+\uncover<+->{Если $B$ -- решение, найденное жадным алгоритмом, то $d(B)=O\left(|A|^{-1}\right)$}
+
+\end{frame}
+
+\begin{frame}
+\begin{center}
+\begin{tikzpicture}[x=5cm, y=5cm]
+\node (n0) at (0,0) {a};
+\node (n1) at (1,0) {b};
+\node (n2) at (0,1) {c};
+\node (n3) at (1,1) {d};
+
+\path[edge] (n0) --  node[above left] {1} (0.5,0.5) -- (n3);
+\path[edge] (n0) -- node[left] {2} (n2);
+\path[edge] (n0) -- node[below] {2} (n1);
+
+\path[edge] (n2) --  node[below left] {100} (0.5,0.5)-- (n1);
+\path[edge] (n1) -- node[right] {2} (n3);  
+\path[edge] (n2) -- node[above] {2} (n3);  
+\end{tikzpicture}
+\end{center}
+\end{frame}
 
 \end{document}
